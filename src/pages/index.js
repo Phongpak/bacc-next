@@ -5,12 +5,12 @@ import Footer from "../components/Layout/Footer/FooterOne/Footer";
 import Header from "../components/Layout/Header/Header";
 
 export default function Home() {
-  const [number, setNumber] = useState(0);
+  // const [number, setNumber] = useState(0);
 
-  useEffect(() => {
-    // Reset number at startup
-    number = 0;
-  }, []);
+  // useEffect(() => {
+  // Reset number at startup
+  //   number = 0;
+  // }, []);
 
   return (
     <>
