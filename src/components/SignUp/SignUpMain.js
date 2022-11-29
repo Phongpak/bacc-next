@@ -15,14 +15,14 @@ const SignUpMain = () => {
 
       <section
         className="sign-up-area pt-130 pb-90"
-        style={{ background: "url(assets/img/bg/sign-up-bg.jpg)" }}
+        // style={{ background: "url(assets/img/bg/sign-up-bg.jpg)" }}
       >
         <div className="container">
           <div className="row">
             <div className="col-lg-12 ">
               <div className="sign-up-wrapper pos-rel mb-40 wow fadeInUp ">
                 {/* <div className="sign-up-inner"> */}
-                <div className="sign-up-content  d-flex flex-column align-items-center ">
+                <div className="sign-up-content  d-flex flex-column align-items-center">
                   {/* <h4>Create Account</h4>
                     <p className="mb-35">
                       It's easy to create an account for Non-fungible tokens and
@@ -42,6 +42,7 @@ const SignUpMain = () => {
                           name="f-name"
                           id="f-name"
                           placeholder="Full Name"
+                          className="border"
                         />
                       </div>
                     </div>
@@ -54,6 +55,7 @@ const SignUpMain = () => {
                           name="m-id"
                           id="m-id"
                           placeholder="Email address"
+                          className="border"
                         />
                       </div>
                     </div>
@@ -65,6 +67,7 @@ const SignUpMain = () => {
                           name="u-name"
                           id="u-name"
                           placeholder="Password"
+                          className="border"
                         />
                       </div>
                     </div>
@@ -76,6 +79,7 @@ const SignUpMain = () => {
                           name="password"
                           id="password"
                           placeholder="Confirm Password"
+                          className="border"
                         />
                       </div>
                       {/* </div> */}

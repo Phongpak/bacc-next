@@ -1,10 +1,17 @@
 import Head from "next/head";
-import React from "react";
-import ActivityMain from "../components/Activity/ActivityMain";
+import React, { useEffect, useState } from "react";
+import HomeOneMain from "../components/HomeOne/HomeOneMain";
 import Footer from "../components/Layout/Footer/FooterOne/Footer";
 import Header from "../components/Layout/Header/Header";
 
-export default function Activity() {
+export default function Home() {
+  // const [number, setNumber] = useState(0);
+
+  // useEffect(() => {
+  // Reset number at startup
+  //   number = 0;
+  // }, []);
+
   return (
     <>
       <Head>
@@ -13,8 +20,8 @@ export default function Activity() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <ActivityMain />
+      <Header HeaderStatic="oc-transparent-header" />
+      <HomeOneMain />
       <Footer />
     </>
   );

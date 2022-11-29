@@ -236,34 +236,36 @@ p {
   --clr-common-white: #ffffff;
   --clr-common-black: #000000;
   --clr-common-blue: #2785ff;
-  --clr-common-heading: #171717;
+  --clr-common-heading: rgb(113, 113, 113);
   --clr-common-body-text: #636363;
   --clr-common-border: #e0e2e5;
   --clr-common-placeholder: #b4b4b4;
-  --clr-theme-1: #2785ff;
+  --clr-theme-1: rgb(198, 175, 128);
   --clr-bg-white: #ffffff;
-  --clr-bg-gray: #f9f9f9;
+  --clr-bg-cream: #f9f5f0;
   --clr-bg-black: #000000;
   --clr-bg-footer: #f9f9f9;
   --clr-bg-dark: #ffffff;
   --clr-bg-bodylight: #eff1f5;
+  --clr-bg-grey: rgb(153, 153, 153);
 }
 
 [data-theme="dark"] {
   --clr-common-white: #ffffff;
   --clr-common-black: #000000;
   --clr-common-blue: #2785ff;
-  --clr-common-heading: #ffffff;
-  --clr-common-body-text: #86909d;
-  --clr-common-border: #2a2f36;
+  --clr-common-heading: rgb(113, 113, 113);
+  --clr-common-body-text: #636363;
+  --clr-common-border: #e0e2e5;
   --clr-common-placeholder: #b4b4b4;
-  --clr-theme-1: #2785ff;
-  --clr-bg-white: #1c2434;
-  --clr-bg-gray: ##f9f9f9;
+  --clr-theme-1: rgb(198, 175, 128);
+  --clr-bg-white: #ffffff;
+  --clr-bg-cream: #f9f5f0;
   --clr-bg-black: #000000;
-  --clr-bg-footer: #181f2d;
-  --clr-bg-dark: #111826;
-  --clr-bg-bodylight: #111826;
+  --clr-bg-footer: #f9f9f9;
+  --clr-bg-dark: #ffffff;
+  --clr-bg-bodylight: #eff1f5;
+  --clr-bg-grey: rgb(153, 153, 153);
 }
 
 /*--
@@ -309,8 +311,8 @@ p {
 /*--
     - Background color
 -----------------------------------------*/
-.grey-bg {
-  background: var(--clr-common-gray);
+.cream-bg {
+  background: var(--clr-common-cream);
 }
 
 .pink-bg {
@@ -559,7 +561,7 @@ p {
   font-size: 16px;
   color: var(--clr-common-white);
   font-weight: 600;
-  background-image: linear-gradient(to right, #2b81ff, #7237ff, #2b81ff);
+  background-color: rgb(198, 175, 128);
   background-size: 200% 100%;
   height: 50px;
   display: inline-block;
@@ -860,4 +862,10 @@ p {
 .nice-select .option.focus,
 .nice-select .option.selected.focus {
   background-color: var(--clr-common-border);
+}
+.bg-area-cream {
+  background: var(--clr-bg-cream);
+}
+.bg-area-grey {
+  background: var(--clr-bg-grey);
 }

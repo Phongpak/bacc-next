@@ -6,18 +6,20 @@ import Breadcrumbs from "../Common/PageTitle";
 const LoginMain = () => {
   return (
     <main>
-      <ThemeChanger />
-
-      <Breadcrumbs breadcrumbTitle="Sign in" breadcrumbSubTitle="Sign in" />
+      {/* <Breadcrumbs breadcrumbTitle="Sign in" breadcrumbSubTitle="Sign in" /> */}
 
       <section
-        className="login-area pt-130 pb-90"
-        style={{ background: "url(assets/img/bg/sign-up-bg.jpg)" }}
+        className="login-area pt-20 pb-90"
+        // style={{ background: "url(assets/img/bg/sign-up-bg.jpg)" }}
       >
-        <div className="container">
+        <div className="w-full d-flex flex-column align-items-center mb-20">
+          <h1>Welcome to</h1>
+          <h1>Nowhere</h1>
+        </div>
+        <div className="container ">
           <div className="row justify-content-center">
             <div className="col-xxl-6 col-xl-7 col-lg-8">
-              <div className="login-wrapper pos-rel mb-40 wow fadeInUp">
+              <div className="login-wrapper pos-rel mb-40 wow fadeInUp ">
                 <div className=" login-inner">
                   <div className="login-content">
                     <h4>Sign in Account</h4>
@@ -31,6 +33,7 @@ const LoginMain = () => {
                               name="m-id"
                               id="m-id"
                               placeholder="Your email"
+                              className="border"
                             />
                           </div>
                         </div>
@@ -48,8 +51,10 @@ const LoginMain = () => {
                               name="password"
                               id="password"
                               placeholder="********"
+                              className="border"
                             />
                           </div>
+                          <span></span>
                         </div>
                       </div>
                       <div className="login-btn">
