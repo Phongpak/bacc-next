@@ -43,7 +43,16 @@
   }
 }
 
+.topic-confirm-email {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
 .single-input-unit {
+  position: relative;
   label {
     font-size: 16px;
     font-weight: 700;
@@ -73,12 +82,43 @@
       outline: none;
     }
   }
+
+  .no-border-input {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .icon-hide-button {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+  }
+
+  .no-margin {
+    margin-bottom: 0;
+  }
+
+  .text-help {
+    text-align: end;
+    font-weight: 300;
+    font-size: 16px;
+    color: #676767;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+}
+
+.topic-login {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
 }
 
 .sign-up-btn {
   display: flex;
+  flex-direction: column;
   align-content: center;
-  gap: 30px;
 
   @media #{$sm,$xs} {
     flex-direction: column;
@@ -91,6 +131,40 @@
       line-height: inherit;
     }
   }
+}
+
+.text-account {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.text-login {
+  color: #7cd2d7 !important;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+.icon-hide-button-signup {
+  position: absolute;
+  right: 2%;
+  top: 15%;
+}
+
+.is-logint-text {
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 21px;
+  line-height: 18px;
+  color: #a0a0a0;
+}
+
+.is-center-modal {
+  display: flex;
+  flex-direction: column;
 }
 
 .gender-category-select {
@@ -346,4 +420,42 @@ select {
     width: 100%;
     height: 300px;
   }
+}
+
+.remark-email {
+  color: #c6af80;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.content-des-resend-email {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.register-result-text {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  text-align: center;
+}
+
+.register-result-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-login-confirm {
+  width: 130px;
+}
+
+.is-center {
+  display: flex;
+  justify-content: center;
 }

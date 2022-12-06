@@ -48,7 +48,8 @@
 
   .sign-up-wrapper,
   .login-wrapper {
-    background: var(--clr-bg-cream);
+    background: #FFFFFF;
+    border-radius: 30px;
   }
 
   .copyright-support-lines::before {
@@ -127,7 +128,8 @@
   }
 
   .filter-search-input.header-search input {
-    border: 1px solid #2d3136;
+    // border: 1px solid #2d3136;
+    border: none;
   }
 }
 

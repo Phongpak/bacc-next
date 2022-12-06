@@ -1,36 +1,45 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Breadcrumbs from "../Common/PageTitle";
+
+// component
 import Pagination from "../Common/Pagination";
-import ThemeChanger from "../Common/ThemeChanger";
-import ExploreCategorySlider from "../Elements/Slider/ExploreCategorySlider";
 import ExploreArtsBar from "./ExploreArtsBar";
 import ExploreArtsSingle from "./ExploreArtsSingle";
+import ExploreFilterLeft from "./ExploreFilterLeft";
 
 const ExploreArtsMain = () => {
   const products = useSelector((state) => state.products.products);
-
+  
   return (
     <main>
-      <ThemeChanger />
-
-      <Breadcrumbs
-        breadcrumbTitle="Explore Artworks"
-        breadcrumbSubTitle="Explore"
-      />
-
-      <section className="artworks-area pt-130 pb-90">
-        <div className="container">
-          {/* <ExploreCategorySlider /> */}
-          <ExploreArtsBar />
-          <div className="row wow fadeInUp">
-            {products.slice(0, 24).map((product) => (
-              <ExploreArtsSingle key={product.id} product={product} />
-            ))}
+      <section className="container">
+        <div className="row wow fadeInUp">
+          <div className="col-lg-4">
+            <div className="section-title1">
+              <h2 className="section-main-title1 mb-40 mt-40">
+                Recent Products
+              </h2>
+            </div>
           </div>
-          <div className="row wow fadeInUp">
-            <div className="col-12">
-              <Pagination />
+
+          <div className="artworks-area">
+
+            <div className="col-lg-3 filter-border">
+              <ExploreFilterLeft />
+            </div>
+
+            <div className="col-lg-10">
+              <ExploreArtsBar />
+              <div className="row wow fadeInUp">
+                {products.slice(0, 24).map((product) => (
+                  <ExploreArtsSingle key={product.id} product={product} />
+                ))}
+              </div>
+              <div className="row wow fadeInUp">
+                <div className="col-12">
+                  <Pagination />
+                </div>
+              </div>
             </div>
           </div>
         </div>

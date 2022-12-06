@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../components/Layout/Footer/FooterOne/Footer';
 import Header from '../components/Layout/Header/Header';
-import SignUpMain from '../components/SignUp/SignUpMain';
+import ConfirmEmailMain from '../components/SignUp/ConfirmEmailMain';
 
 
-export default function Register() {
+export default function ConfirmEmail() {
 
   return (
     <>
@@ -16,8 +15,7 @@ export default function Register() {
       </Head>
 
       <Header />
-      <SignUpMain />
-      {/* <Footer /> */}
+      <ConfirmEmailMain />
     </>
   )
 }

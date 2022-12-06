@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../components/Layout/Footer/FooterOne/Footer';
 import Header from '../components/Layout/Header/Header';
 import LoginMain from '../components/Login/LoginMain';
 
@@ -18,7 +17,7 @@ export default function Login() {
 
       <Header />
       <LoginMain />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
