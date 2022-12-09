@@ -1,12 +1,15 @@
+import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 import ExploreArtsSingle from "../ExploreArts/ExploreArtsSingle";
 
 const ArtWorksSection = () => {
-  const products = useSelector((state) => state.products.products);
+  //state
+  const nfts = useSelector((state) => state.nfts.nfts);
+  const FILTER_TYPE = ["All", "Gaming", "Art", "Nature", "Collectibles"];
 
   return (
-    <section className="artworks-area bg-area-cream pt-110 pb-100 z-index-1">
+    <section className="artworks-area bg-area-cream pt-40 pb-100 z-index-1">
       <div className="container">
         <div className="row wow fadeInUp">
           <div className="col-lg-4">
@@ -14,65 +17,33 @@ const ArtWorksSection = () => {
               <h2 className="section-main-title1 mb-40">Trending</h2>
             </div>
           </div>
-          <div className="col-lg-8">
-            <form action="#" className="artwork-filter-row mb-40">
-              <div className="common-select-arrow common-select-arrow-40 white-bg">
-                <select
-                  name="s-t-select"
-                  id="s-t-select"
-                  className="sale-type-select"
-                >
-                  <option value="1">Sale Type</option>
-                  <option value="2">Fixed</option>
-                  <option value="3">Auction</option>
-                  <option value="3">On sale</option>
-                </select>
-              </div>
-              <div className="common-select-arrow common-select-arrow-40 white-bg">
-                <select
-                  name="cat-select"
-                  id="cat-select"
-                  className="category-select"
-                >
-                  <option value="1">Category</option>
-                  <option value="2">3D Artwork</option>
-                  <option value="3">Video</option>
-                  <option value="3">Animation</option>
-                  <option value="3">Games</option>
-                  <option value="3">Software</option>
-                  <option value="3">Photography</option>
-                </select>
-              </div>
-              <div className="common-select-arrow common-select-arrow-40 white-bg">
-                <select
-                  name="st-select"
-                  id="st-select"
-                  className="status-select"
-                >
-                  <option value="1">Status</option>
-                  <option value="2">New</option>
-                  <option value="3">Featured</option>
-                </select>
-              </div>
-              <div className="common-select-arrow common-select-arrow-40 white-bg">
-                <select
-                  name="pr-select"
-                  id="pr-select"
-                  className="price-select"
-                >
-                  <option value="1">Price</option>
-                  <option value="2">High</option>
-                  <option value="3">Medium</option>
-                  <option value="3">Low</option>
-                </select>
-              </div>
-            </form>
+        </div>
+
+        <div className="row wow fadeInUp">
+          <div className="col-lg-8 mb-20">
+            {FILTER_TYPE.map((item, index) => (
+              <button
+                key={index}
+                className={`${index === 0 ? "active" : ""} btn-filter-home`}
+              >
+                <span>{item}</span>
+              </button>
+            ))}
           </div>
         </div>
+
+        {/* card nft */}
         <div className="row wow fadeInUp">
-          {products.slice(10, 18).map((product) => (
+          {nfts.slice(0, 18).map((product) => (
             <ExploreArtsSingle key={product.id} product={product} />
           ))}
+        </div>
+        
+        {/* see all */}
+        <div className="see-all-btn">
+          <Link href={"/explore-arts"}>
+            <a>See all</a>
+          </Link>
         </div>
       </div>
     </section>

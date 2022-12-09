@@ -11,14 +11,12 @@ import TopCreatorTwo from "./TopCreatorTwo";
 const HomeTwoMain = () => {
   return (
     <main>
-      {/* <ThemeChanger /> */}
       <HeroSectionTwo />
       <TrendingSection />
       <TopCreatorTwo />
-      {/* <WalletSection walletSpacing="pt-80 pb-100 z-index-1" /> */}
       <WorkProcessSection />
-      <PopularSection />
-      <OctionTwoSlider />
+      {/* <PopularSection /> */}
+      {/* <OctionTwoSlider /> */}
     </main>
   );
 };

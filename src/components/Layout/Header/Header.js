@@ -1,8 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import useSticky from "../../../hooks/useSticky";
-import { useRouter } from "next/router";
 import MobileMenu from "./MobileMenu";
+
+// next
+import Image from "next/image";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = ({ HeaderStatic }) => {
   const [isActive11, setActive11] = useState("false");
@@ -36,80 +40,139 @@ const Header = ({ HeaderStatic }) => {
           <div className="container header-container bg-area-cream">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-4 col-4">
-                <div className="header-main-left">
-                  {/* <div className="header-logo header1-logo">
-                    <Link href="/">
-                      <a className="logo-bb"> */}
-                  {/* <img
-                          src="assets/img/logo/oction-logo.png"
-                          alt="logo-img"
-                        /> */}
-                  {/* </a>
-                    </Link>
-                    <Link href="/">
-                      <a className="logo-bw">
-                        <img
-                          src="assets/img/logo/oction-logo-bw.png"
-                          alt="logo-img"
-                        />
-                      </a>
-                    </Link>
-                  </div> */}
+                <div className="header-main-left mt-3 mr-5">
+                  <Image
+                    src="/assets/img/logo/logo-bacc.svg"
+                    alt="logo"
+                    width={250}
+                    height={40}
+                    className="logo-main"
+                  />
                 </div>
               </div>
-              <div className="col-xl-10 col-lg-10 col-md-8 col-8">
+
+              <div className="col-xl-2 col-lg-2 col-md-4 col-4">
+                <form
+                  action="#"
+                  className="filter-search-input header-search d-none d-xl-inline-block mt-2 "
+                >
+                  <input
+                    type="text"
+                    placeholder="Search keyword"
+                    className="search-header"
+                  />
+                  <button>
+                    <i className="fal fa-search"></i>
+                  </button>
+                </form>
+              </div>
+
+              <div className="col-xl-8 col-lg-10 col-md-8 col-8">
                 <div className="header-main-right">
-                  <div className="main-menu main-menu1 d-none d-lg-block ml-0">
+                  <div className="main-menu main-menu1 d-none d-lg-block no-margin">
                     <nav id="mobile-menu">
                       <ul>
                         <li>
-                          <Link href="/index-2">
-                            <a className="font-grey">Home</a>
-                          </Link>
-                        </li>
-                        <li>
                           <Link href="/explore-arts">
-                            <a>Explore</a>
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/explore.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Explore</span>
+                            </a>
                           </Link>
                         </li>
-                        {/* <li>
-                          <Link href="/creators">
-                            <a>Auctions</a>
+
+                        <li>
+                          <Link href="/auctions">
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/auctions.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Auctions</span>
+                            </a>
                           </Link>
-                        </li> */}
+                        </li>
+
                         <li>
                           <Link href="/creators">
-                            <a>Exhibitions</a>
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/Exhibitions.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Exhibitions</span>
+                            </a>
                           </Link>
                         </li>
 
                         <li>
                           <Link href="/forum">
-                            <a>Activities</a>
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/Activity.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Activity</span>
+                            </a>
                           </Link>
                         </li>
-                        {/* <li>
-                          <Link href="/contact">
-                            <a>Your cart</a>
+
+                        <li>
+                          <Link href="/forum">
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/Cart.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Your cart</span>
+                            </a>
                           </Link>
-                        </li> */}
+                        </li>
+
+                        <li>
+                          <Link href="/forum">
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/Account.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                                className="header-icon"
+                              />
+
+                              <span className="p-1">Account</span>
+                            </a>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link href="/forum">
+                            <a className="button-change-i18n">EN|TH</a>
+                          </Link>
+                        </li>
                       </ul>
                     </nav>
                   </div>
-                  <form
-                    action="#"
-                    className="filter-search-input header-search d-none d-xl-inline-block mr-10"
-                  >
-                    <input type="text" placeholder="Search keyword" />
-                    <button>
-                      <i className="fal fa-search"></i>
-                    </button>
-                  </form>
-                  <div className="header-btn ml-20  d-xxl-inline-block mr-10">
+
+                  {/* <div className="header-btn ml-20  d-xxl-inline-block mr-10">
                     <Link href="/wallet-connect">
                       <a className="fill-btn">Connect Wallet</a>
                     </Link>
-                  </div>
+                  </div> */}
+
                   {token ? (
                     <div className="profile-item profile-item-header  d-none d-md-inline-block pos-rels">
                       <div
@@ -118,8 +181,7 @@ const Header = ({ HeaderStatic }) => {
                         } `}
                         onClick={handleToggle11}
                       >
-                        {/* <div className="profile-action "> */}
-                        <div className="profile-action ">
+                        {/* <div className="profile-action ">
                           <ul style={{ width: "auto" }}>
                             <li>
                               <Link href="/creator-profile-info-personal">
@@ -147,10 +209,10 @@ const Header = ({ HeaderStatic }) => {
                         <img
                           src="assets/img/profile/profile4.jpg"
                           alt="profile-img"
-                        />
-                        <div className="profile-verification verified">
+                        /> */}
+                        {/* <div className="profile-verification verified">
                           <i className="fas fa-check"></i>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   ) : (
@@ -186,21 +248,6 @@ const Header = ({ HeaderStatic }) => {
                       </div>
                     </div>
                   )}
-                  {/* <div className="menu-bar d-xl-none ml-20">
-                    <a
-                      className="side-toggle"
-                      href="#!"
-                      onClick={() => {
-                        setMenuOpen(!menuOpen);
-                      }}
-                    >
-                      <div className="bar-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                    </a>
-                  </div> */}
                 </div>
               </div>
             </div>

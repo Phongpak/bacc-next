@@ -29,8 +29,16 @@
         margin: 0px 13px;
       }
 
+      img,
+      svg {
+        font-size: 16px;
+        text-transform: inherit;
+        display: inline-block;
+        padding: 3px 0;
+      }
+
       a {
-        font-size: 18px;
+        font-size: 16px;
         color: var(--clr-common-heading);
         text-transform: inherit;
         display: inline-block;
@@ -185,7 +193,7 @@
 
 // header style
 .container.header-container {
-  max-width: 1650px;
+  max-width: 1690px;
 }
 
 .header-top {
@@ -265,8 +273,11 @@
 }
 
 .header-main1 {
-  border-bottom: 1px solid var(--clr-common-border);
+  // border-bottom: 1px solid var(--clr-common-border);
+  border-bottom: 3px solid #dcd5cb;
   overflow-x: clip;
+  // margin-right: 6rem;
+  // margin-left: 6rem;
 }
 
 .header1-logo img {
@@ -279,7 +290,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: px;
+  margin-right: 100px;
 }
 
 .main-menu1 {
@@ -359,16 +370,16 @@
   }
 
   button {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 1px;
-      height: 20px;
-      background: var(--clr-common-border);
-      top: 50%;
-      transform: translateY(-50%);
-      left: -18px;
-    }
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   width: 1px;
+    //   height: 20px;
+    //   background: var(--clr-common-border);
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   left: -18px;
+    // }
 
     top: 9px;
     color: #8b8d8f;
@@ -620,6 +631,7 @@ div.mean-container {
   .header-main-left {
     display: flex;
     align-items: center;
+    // margin-left: 100px !important;
   }
 
   .header-main-right {
@@ -994,4 +1006,25 @@ div.mean-container {
     width: 45px;
     line-height: 45px;
   }
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.search-header {
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.button-change-i18n {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  color: #717171;
+}
+
+.logo-main {
+  padding-left: 10px !important;
 }

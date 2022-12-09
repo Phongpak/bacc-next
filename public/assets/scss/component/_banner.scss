@@ -27,8 +27,12 @@
   top: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   z-index: -1;
+
+  img {
+    width: 100%;
+  }
 }
 
 .b1-shape1 {
@@ -127,6 +131,12 @@
   h1 {
     font-size: 65px;
     line-height: 1.2;
+    color: var(--clr-common-white);
+    letter-spacing: 0.04em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    order: 0;
 
     @media #{$lg} {
       font-size: 60px;
@@ -147,10 +157,14 @@
     span {
       font-weight: 800;
       color: var(--clr-theme-1);
+      font-size: 60px !important;
     }
   }
 
   p {
+    font-size: 20px;
+    color: var(--clr-common-white);
+    font-weight: 700;
     font-size: 20px;
   }
 }
@@ -159,6 +173,19 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.create-btn {
+  background: #fef7ec;
+  border-radius: 8px;
+  width: 153px;
+  color: #C6AF80;
+  margin-left: 2rem;
+}
+
+.explore-btn {
+  width: 153px;
+  border-radius: 8px;
 }
 
 .oc-banner-video {
