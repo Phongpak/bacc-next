@@ -477,15 +477,47 @@
     }
   }
 
+  .accordion-item.sale {
+    border: 1px solid #dcd5cb;
+    border-radius: 0;
+    // width: 382px;
+  }
+
   .accordion-body {
     font-size: 18px;
     line-height: 30px;
-    padding: 20px 30px 30px;
+    padding: 15px 15px 15px;
     background: var(--clr-bg-white);
 
     @media #{$lg,$xs} {
       padding: 20px 15px 30px;
     }
+  }
+
+  .btn-buy-art-detail {
+    background: #c6af80;
+    border-radius: 10px;
+    height: 34px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .current-price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 109.02%;
+    /* or 17px */
+    letter-spacing: 0.04em;
+    color: rgba(113, 113, 113, 0.5);
+  }
+
+  .price-value {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 109.02%;
+    letter-spacing: 0.04em;
+    color: #000000;
   }
 
   .accordion-button {
@@ -506,11 +538,10 @@
     }
 
     &::after {
-      content: "\f068";
+      background-image: url("/assets/img/logo/arrow-down.svg") !important;
+      right: 10px;
       font-family: "Font Awesome 5 Pro";
-      background-image: none;
       position: absolute;
-      left: 30px;
       font-size: 20px;
       line-height: 20px;
       font-weight: 500;
@@ -533,18 +564,49 @@
     }
   }
 
+  .accordion-button.sale {
+    padding: 15px !important;
+    padding-right: 30px !important;
+    border: 1px solid #dcd5cb;
+    border-radius: 0;
+    border: none;
+    font-size: 16px;
+    color: #717171;
+    font-weight: 600;
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-of-type {
+      .accordion-button {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    &:last-of-type {
+      .accordion-button.collapsed {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
   .accordion-button.collapsed {
     border-bottom: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-
-    &::after {
-      content: "\f067";
-    }
-
     &:focus {
       border-color: var(--clr-common-white);
     }
+  }
+}
+
+.accordion-button.sale.no-icon {
+  &::after {
+    content: none !important;
   }
 }
 

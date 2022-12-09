@@ -40,14 +40,17 @@ const Header = ({ HeaderStatic }) => {
           <div className="container header-container bg-area-cream">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-4 col-4">
-                <div className="header-main-left mt-3 mr-5">
-                  <Image
-                    src="/assets/img/logo/logo-bacc.svg"
-                    alt="logo"
-                    width={250}
-                    height={40}
-                    className="logo-main"
-                  />
+                <div className="header-main-left mt-3 mr-5" onClick={() => router.push("/")}>
+                  
+                      <Image
+                        src="/assets/img/logo/logo-bacc.svg"
+                        alt="logo"
+                        width={250}
+                        height={40}
+                        className="logo-main"
+                      />
+                    
+                 
                 </div>
               </div>
 
@@ -128,7 +131,7 @@ const Header = ({ HeaderStatic }) => {
                           </Link>
                         </li>
 
-                        <li>
+                        {/* <li>
                           <Link href="/forum">
                             <a>
                               <Image
@@ -140,7 +143,7 @@ const Header = ({ HeaderStatic }) => {
                               <span className="p-1">Your cart</span>
                             </a>
                           </Link>
-                        </li>
+                        </li> */}
 
                         <li>
                           <Link href="/forum">

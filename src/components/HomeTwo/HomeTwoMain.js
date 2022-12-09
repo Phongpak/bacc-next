@@ -15,7 +15,7 @@ const HomeTwoMain = () => {
       <TrendingSection />
       <TopCreatorTwo />
       <WorkProcessSection />
-      {/* <PopularSection /> */}
+      <PopularSection />
       {/* <OctionTwoSlider /> */}
     </main>
   );
