@@ -28,7 +28,7 @@ const ExploreArtsMain = () => {
               <ExploreFilterLeft />
             </div>
 
-            <div className="col-lg-10">
+            <div className="col-lg-9">
               <ExploreArtsBar />
               <div className="row wow fadeInUp">
                 {products.slice(0, 24).map((product) => (

@@ -290,7 +290,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 100px;
+  // margin-right: 100px;
 }
 
 .main-menu1 {
@@ -632,6 +632,7 @@ div.mean-container {
     display: flex;
     align-items: center;
     // margin-left: 100px !important;
+    cursor: pointer !important;
   }
 
   .header-main-right {

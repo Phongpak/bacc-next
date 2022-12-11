@@ -979,8 +979,8 @@
 
 // art-details style
 .art-item-img.art-details-img {
-  max-width: 600px;
-  height: 1100px;
+  max-width: 553px;
+  height: 330px;
 
   @media #{$xl} {
     height: 1000px;
@@ -1011,8 +1011,8 @@
 
 .created-by {
   font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--clr-common-body-text);
+  // margin-bottom: 20px;
+  color: var(--clr-common-black);
 }
 
 .creator {
@@ -1039,12 +1039,13 @@
 }
 
 .art-name-details {
-  border-top: 1px solid var(--clr-common-border);
-  border-bottom: 1px solid var(--clr-common-border);
+  // border-top: 1px solid var(--clr-common-border);
+  // border-bottom: 1px solid var(--clr-common-border);
   padding: 17px 0 15px 0;
 
   .art-name {
-    font-size: 48px;
+    font-size: 32px;
+    letter-spacing: 0.04em;
 
     @media #{$lg,$sm} {
       font-size: 38px;
@@ -1123,8 +1124,8 @@
 }
 
 .artist-meta-info.art-details-meta-info {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  // margin-top: 40px;
+  margin-bottom: 20px;
 
   @media #{$xs} {
     display: inherit;
