@@ -32,25 +32,25 @@ const Header = ({ HeaderStatic }) => {
         <div
           id="header-sticky"
           className={
-            sticky
-              ? "sticky header-main header-main1 "
-              : "header-main header-main1"
+            // sticky ?
+            "sticky header-main header-main1 "
+            // : "header-main header-main1"
           }
         >
-          <div className="container header-container bg-area-cream">
+          <div className="container header-container">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-4 col-4">
-                <div className="header-main-left mt-3 mr-5" onClick={() => router.push("/")}>
-                  
-                      <Image
-                        src="/assets/img/logo/logo-bacc.svg"
-                        alt="logo"
-                        width={250}
-                        height={40}
-                        className="logo-main"
-                      />
-                    
-                 
+                <div
+                  className="header-main-left mt-3 mr-5"
+                  onClick={() => router.push("/")}
+                >
+                  <Image
+                    src="/assets/img/logo/logo-bacc.svg"
+                    alt="logo"
+                    width={250}
+                    height={40}
+                    className="logo-main"
+                  />
                 </div>
               </div>
 
