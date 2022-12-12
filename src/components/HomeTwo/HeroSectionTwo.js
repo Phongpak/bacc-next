@@ -52,7 +52,7 @@ const HeroSectionTwo = () => {
                           <a className="fill-btn explore-btn">Explore</a>
                         </Link>
 
-                        <Link href="/create">
+                        <Link href="/create-nft">
                           <a className="fill-btn create-btn">create</a>
                         </Link>
                       </div>
