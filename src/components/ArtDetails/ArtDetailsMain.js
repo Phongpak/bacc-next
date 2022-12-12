@@ -88,7 +88,7 @@ const ArtDetailsMain = () => {
                     </ArtDetailsCollapse>
                   </div>
 
-                  <div className="col-xl-10 art-details-meta-info">
+                  <div className="col-xl-12 art-details-meta-info">
                     <ArtDetailsCollapse
                       title={"Price History"}
                       type={"collapse"}
@@ -101,7 +101,7 @@ const ArtDetailsMain = () => {
                     </ArtDetailsCollapse>
                   </div>
 
-                  <div className="col-xl-10 art-details-meta-info">
+                  <div className="col-xl-12 art-details-meta-info">
                     <ArtDetailsCollapse
                       title={"Offer"}
                       type={"collapse"}
