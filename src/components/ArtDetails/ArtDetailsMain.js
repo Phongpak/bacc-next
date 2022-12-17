@@ -9,7 +9,7 @@ const ArtDetailsMain = () => {
 
   return (
     <main>
-      <section className="art-details-area pt-40 pb-0">
+      <section className="art-details-area pb-0">
         <div className="container">
           <div className="art-details-wrapper">
             <div className="row">

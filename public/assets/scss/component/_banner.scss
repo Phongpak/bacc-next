@@ -9,7 +9,7 @@
 }
 
 .banner-670 {
-  min-height: 670px;
+  min-height: 580px;
   position: relative;
 }
 
@@ -32,6 +32,12 @@
 
   img {
     width: 100%;
+  }
+
+  @media #{$lg,$md,$sm,$xs} {
+    img {
+      min-height: 560px !important;
+    }
   }
 }
 
@@ -128,6 +134,10 @@
 }
 
 .banner-content {
+  @media #{$xxl} {
+    padding-top: 120px;
+  }
+
   h1 {
     font-size: 65px;
     line-height: 1.2;
@@ -179,13 +189,14 @@
   background: #fef7ec;
   border-radius: 8px;
   width: 153px;
-  color: #C6AF80;
-  margin-left: 2rem;
+  color: #c6af80;
+  margin: 0.5rem;
 }
 
 .explore-btn {
   width: 153px;
   border-radius: 8px;
+  margin: 0.5rem;
 }
 
 .oc-banner-video {

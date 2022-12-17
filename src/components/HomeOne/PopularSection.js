@@ -41,7 +41,7 @@ const PopularSection = () => {
     },
   ];
   return (
-    <section className="popular-collections-area pt-100 pb-100 bg-area-grey">
+    <section className="popular-collections-area pt-100">
       <div className="container">
         <div className="row wow fadeInUp">
           <div className="col-lg-12">
