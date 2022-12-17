@@ -35,6 +35,26 @@
   }
 }
 
+// #customFileBanner, #customFileProfile {
+//   background-image: url('/assets/img/profile/profile1.jpg');
+// }
+
+.img-upload {
+  position: relative;
+  height: 100%;
+
+  input {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+.profile-img-upload {
+  width: 187px;
+  height: 187px;
+}
+
 .setting-rank-list-row {
   justify-content: space-around !important;
 }

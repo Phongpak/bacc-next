@@ -1,24 +1,88 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const SettingProfileFormSection = () => {
+  const [previewProfile, setPreviewProfile] = useState("");
+  const [previewBanner, setPreviewBanner] = useState("");
+
+  // setelcted
+  const [selectedProfile, setSelectedProfile] = useState();
+  const [selectedBanner, setSelectedBanner] = useState();
+
+  const handleChangeProfile = (file) => {
+    if (!file.target.files || file.target.files.length === 0) {
+      setSelectedProfile(undefined);
+      return;
+    }
+    setSelectedProfile(file.target.files[0]);
+    setPreviewProfile(URL.createObjectURL(file.target.files[0]));
+  };
+
+  const handleChangeBanner = (file) => {
+    if (!file.target.files || file.target.files.length === 0) {
+      setSelectedBanner(undefined);
+      return;
+    }
+    setSelectedBanner(file.target.files[0]);
+    setPreviewBanner(URL.createObjectURL(file.target.files[0]));
+  };
+
   return (
     <>
       <div className="mt-70 pb-40">
         <h4 className="sidebar-widget-title text-dark">Profile Settings</h4>
         <div className="d-flex  justify-content-between align-items-center">
-          <div className="d-flex flex-row align-items-center">
+          <div className="d-flex flex-row">
             <div className="img-box">
               <h5 className="text-dark">
                 Prifile picture <img src="/assets/img/svg-icon/note.svg" />
               </h5>
-              <img src="/assets/img/profile/profile1.jpg" alt="img-prfile" />
+              <div className="img-upload">
+                {!previewProfile && (
+                  <>
+                    <img
+                      src="/assets/img/profile/profile1.jpg"
+                      alt="img-prfile"
+                    />
+                    <input
+                      type="file"
+                      className="form-control form-upload-img"
+                      id="customFileProfile"
+                      onChange={handleChangeProfile}
+                      accept="image/*"
+                    />
+                  </>
+                )}
+                {selectedProfile && (
+                  <img src={previewProfile} className="profile-img-upload" />
+                )}
+              </div>
             </div>
             <div className="img-box">
               <h5 className="text-dark">
                 Banner picture <img src="/assets/img/svg-icon/note.svg" />
               </h5>
-              <img src="/assets/img/profile/profile1.jpg" alt="img-prfile" />
+              <div className="img-upload">
+                {!previewBanner && (
+                  <>
+                    <img
+                      src="/assets/img/profile/profile1.jpg"
+                      alt="img-prfile"
+                    />
+                    <input
+                      type="file"
+                      className="form-control form-upload-img"
+                      id="customFileBanner"
+                      onChange={handleChangeBanner}
+                      accept="image/*"
+                    />
+                  </>
+                )}
+
+                {selectedBanner && (
+                  <img src={previewBanner} className="profile-img-upload" />
+                )}
+              </div>
             </div>{" "}
           </div>
         </div>

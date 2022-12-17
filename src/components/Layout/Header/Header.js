@@ -22,6 +22,7 @@ const Header = ({ HeaderStatic }) => {
 
   const router = useRouter();
   const [path, setPath] = useState("");
+
   useEffect(() => {
     setPath(router.pathname);
   }, [router]);
@@ -40,7 +41,8 @@ const Header = ({ HeaderStatic }) => {
           <div className="container header-container">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-4 col-4">
-                <div
+                <button
+                  type="button"
                   className="header-main-left mt-3 mr-5"
                   onClick={() => router.push("/")}
                 >
@@ -51,11 +53,11 @@ const Header = ({ HeaderStatic }) => {
                     height={40}
                     className="logo-main"
                   />
-                </div>
+                </button>
               </div>
 
-              <div className="col-xl-2 col-lg-2 col-md-4 col-4">
-                <form
+              {/* <div className="col-xl-2 col-lg-2 col-md-4 col-4">
+ <form
                   action="#"
                   className="filter-search-input header-search d-none d-xl-inline-block mt-2 "
                 >
@@ -68,16 +70,16 @@ const Header = ({ HeaderStatic }) => {
                     <i className="fal fa-search"></i>
                   </button>
                 </form>
-              </div>
+              </div> */}
 
-              <div className="col-xl-8 col-lg-10 col-md-8 col-8">
+              <div className="col-xl-10 col-lg-10 col-md-8 col-8">
                 <div className="header-main-right">
                   <div className="main-menu main-menu1 d-none d-lg-block no-margin">
                     <nav id="mobile-menu">
                       <ul>
                         <li>
                           <Link href="/explore-arts">
-                            <a>
+                            <a className="d-flex">
                               <Image
                                 src="/assets/img/sideabr/explore.svg"
                                 alt="logo"
@@ -89,6 +91,20 @@ const Header = ({ HeaderStatic }) => {
                           </Link>
                         </li>
 
+                        <li>
+                          <Link href="/create-nft">
+                            <a className="d-flex">
+                              <Image
+                                src="/assets/img/sideabr/auctions.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Create</span>
+                            </a>
+                          </Link>
+                        </li>
+                        {/* 
                         <li>
                           <Link href="/auctions">
                             <a>
@@ -129,7 +145,7 @@ const Header = ({ HeaderStatic }) => {
                               <span className="p-1">Activity</span>
                             </a>
                           </Link>
-                        </li>
+                        </li> */}
 
                         {/* <li>
                           <Link href="/forum">
@@ -146,8 +162,8 @@ const Header = ({ HeaderStatic }) => {
                         </li> */}
 
                         <li>
-                          <Link href="/forum">
-                            <a>
+                          <Link href="/creator-profile">
+                            <a className="d-flex">
                               <Image
                                 src="/assets/img/sideabr/Account.svg"
                                 alt="logo"
@@ -160,12 +176,12 @@ const Header = ({ HeaderStatic }) => {
                             </a>
                           </Link>
                         </li>
-
+                        {/* 
                         <li>
                           <Link href="/forum">
                             <a className="button-change-i18n">EN|TH</a>
                           </Link>
-                        </li>
+                        </li> */}
                       </ul>
                     </nav>
                   </div>
@@ -176,6 +192,57 @@ const Header = ({ HeaderStatic }) => {
                     </Link>
                   </div> */}
 
+                  {/* <div className="profile-item profile-item-header ml-20 d-none d-md-inline-block pos-rel">
+                    <div
+                      className={`profile-img pos-rel ${
+                        isActive11 ? "" : "show-element"
+                      }`}
+                      onClick={handleToggle11}
+                    >
+                      <div className="profile-action">
+                        <ul>
+                          <li>
+                            <Link href="/creator-profile-info-personal">
+                              <a>
+                                <i className="fal fa-user"></i>Profile
+                              </a>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/login">
+                              <a>
+                                <i className="fal fa-sign-out"></i>Logout
+                              </a>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <img
+                        src="assets/img/profile/profile4.jpg"
+                        alt="profile-img"
+                      />
+                      <div className="profile-verification verified">
+                        <i className="fas fa-check"></i>
+                      </div>
+                    </div>
+                  </div> */}
+
+                  {/* <div className="menu-bar d-xl-none ml-20">
+                    <a
+                      className="side-toggle"
+                      href="#!"
+                      onClick={() => {
+                        setMenuOpen(!menuOpen);
+                      }}
+                    >
+                      <div className="bar-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </a>
+                  </div> */}
+
                   {token ? (
                     <div className="profile-item profile-item-header  d-none d-md-inline-block pos-rels">
                       <div
@@ -184,25 +251,25 @@ const Header = ({ HeaderStatic }) => {
                         } `}
                         onClick={handleToggle11}
                       >
-                        {/* <div className="profile-action ">
+                        <div className="profile-action ">
                           <ul style={{ width: "auto" }}>
                             <li>
-                              <Link href="/creator-profile-info-personal">
-                                <a>
+                              <Link href="/creator-profile">
+                                <a style={{ fontSize: "13px" }}>
                                   <i className="fal fa-user"></i>Profile
                                 </a>
                               </Link>
                             </li>
                             <li>
-                              <Link href="/upload">
-                                <a>
+                              <Link href="/create-nft">
+                                <a style={{ fontSize: "13px" }}>
                                   <i className="fal fa-sign-out"></i>Create NFT
                                 </a>
                               </Link>
                             </li>
                             <li>
                               <Link href="/">
-                                <a>
+                                <a style={{ fontSize: "13px" }}>
                                   <i className="fal fa-sign-out"></i>Sign out
                                 </a>
                               </Link>
@@ -212,10 +279,10 @@ const Header = ({ HeaderStatic }) => {
                         <img
                           src="assets/img/profile/profile4.jpg"
                           alt="profile-img"
-                        /> */}
-                        {/* <div className="profile-verification verified">
+                        />
+                        <div className="profile-verification verified">
                           <i className="fas fa-check"></i>
-                        </div> */}
+                        </div>
                       </div>
                     </div>
                   ) : (
@@ -251,6 +318,22 @@ const Header = ({ HeaderStatic }) => {
                       </div>
                     </div>
                   )}
+
+                  <div className="menu-bar d-xl-none ml-20">
+                    <a
+                      className="side-toggle"
+                      href="#!"
+                      onClick={() => {
+                        setMenuOpen(!menuOpen);
+                      }}
+                    >
+                      <div className="bar-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

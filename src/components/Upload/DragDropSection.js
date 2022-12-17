@@ -21,7 +21,7 @@ const DragDropSection = () => {
                     handleChange={handleChange}
                     name="file"
                 />
-                <div className="browse-file-note">Allowed all format | Max 1 GB</div>
+                <div className="browse-file-note">Allowed all format | Max 100 MB</div>
             </div>
             <p>{file ? `File name: ${file[0].name}` : "no files uploaded yet"}</p>
         </>

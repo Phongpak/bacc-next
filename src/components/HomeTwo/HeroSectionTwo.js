@@ -25,7 +25,7 @@ const HeroSectionTwo = () => {
               <div className="container pos-rel">
                 <div className="row align-items-center justify-content-center">
                   <div className="col-xxl-8 col-lg-10">
-                    <div className="banner-content banner-content2 banner-content2-1 pt-120">
+                    <div className="banner-content banner-content2 banner-content2-1">
                       <h1
                         data-animation="fadeInUp"
                         data-delay=".3s"

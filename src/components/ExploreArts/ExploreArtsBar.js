@@ -12,7 +12,7 @@ const ExploreArtsBar = () => {
               <button className="fill-btn">Search</button>
             </div>
           </div>
-          <div className="filter-by-sale d-flex justify-content-around align-items-center mb-30">
+          {/* <div className="filter-by-sale d-flex justify-content-around align-items-center mb-30">
             <div className="icon-relaod common-select-arrow-50">
               <Image
                 src="/assets/img/svg-icon/056-reload.svg"
@@ -29,7 +29,7 @@ const ExploreArtsBar = () => {
                 height={30}
               />
             </div>
-          </div>
+          </div> */}
         </form>
       </div>
     </div>

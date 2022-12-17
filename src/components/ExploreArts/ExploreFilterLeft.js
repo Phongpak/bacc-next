@@ -8,6 +8,9 @@ const ExploreFilterLeft = () => {
 
   // state
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpenSort, setIsOpenSort] = React.useState(false);
+  const [isOpenCollection, setIsOpenCollection] = React.useState(false);
+
   const [type, setType] = React.useState("");
 
   const PROFILE_FILTER = [
@@ -59,18 +62,20 @@ const ExploreFilterLeft = () => {
   ];
 
   const handleOpenTab = (key) => {
-    setIsOpen(!isOpen);
-    setType(key);
-    // switch (key) {
-    //   case "Collection":
-    //     return setIsOpenCol(!isOpenCol);
-    //   case "Price":
-    //     return setIsOpenPrice(!isOpenPrice);
-    //   case "Sort by":
-    //     return setIsOpenSort(!isOpenSort);
-    //   default:
-    //     return key;
-    // }
+    if (key.includes("Sort by")) {
+      setIsOpenSort(!isOpenSort);
+      setType("Sort by");
+    }
+
+    if (key.includes("Collection")) {
+      setIsOpenCollection(!isOpenCollection);
+      setType("Collection");
+    }
+
+    if (key.includes("Price")) {
+      setIsOpen(!isOpen);
+      setType("Price");
+    }
   };
 
   return (
@@ -96,21 +101,45 @@ const ExploreFilterLeft = () => {
               className="sort-by-content-item"
               key={`sort-by-content-item-${index}`}
             >
-              {item.type !== "Price" &&
-                item.filter.map((b, i) => (
-                  <>
-                    <button
-                      key={`btn-sort-by-header-${i}`}
-                      className={`${item.type}-btn Sort-by-btn ${
-                        params.filter === undefined && b.name === "All"
-                          ? "active"
-                          : ""
-                      }`}
-                    >
-                      {b.name}
-                    </button>
-                  </>
-                ))}
+              {/* filter price */}
+              {item.type === "Sort by" && isOpenSort && (
+                <>
+                  {item.filter.map((b, i) => (
+                    <>
+                      <button
+                        key={`btn-sort-by-header-${i}`}
+                        className={`${item.type}-btn Sort-by-btn ${
+                          params.filter === undefined && b.name === "All"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        {b.name}
+                      </button>
+                    </>
+                  ))}
+                </>
+              )}
+
+              {/* filter price */}
+              {item.type === "Collection" && isOpenCollection && (
+                <>
+                  {item.filter.map((b, i) => (
+                    <>
+                      <button
+                        key={`btn-sort-by-header-${i}`}
+                        className={`${item.type}-btn Sort-by-btn ${
+                          params.filter === undefined && b.name === "All"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        {b.name}
+                      </button>
+                    </>
+                  ))}
+                </>
+              )}
 
               {/* filter price */}
               {item.type === "Price" && isOpen && (

@@ -44,9 +44,7 @@ const ContactFormSection = () => {
                   <label htmlFor="name" className="topic">
                     External link
                   </label>
-                  <p className="mb-15">
-                    Thde description ,psfkepokfpskfcpclesp,cferogkpem
-                  </p>
+                  <p className="mb-15">description</p>
                   <input
                     type="text"
                     name="name"
@@ -62,9 +60,7 @@ const ContactFormSection = () => {
                   <label htmlFor="message" className="topic">
                     Description
                   </label>
-                  <p className="mb-15">
-                    Thde description ,psfkepokfpskfcpclesp,cferogkpem
-                  </p>
+                  <p className="mb-15">description</p>
                   <textarea
                     name="message"
                     id="message"
@@ -85,11 +81,11 @@ const ContactFormSection = () => {
                       id="s-select"
                       className="gender-category-select input-text"
                     >
-                      <option value="1">Select collection</option>
-                      <option value="2">Subject One</option>
-                      <option value="4">Subject Two</option>
-                      <option value="5">Subject Three</option>
-                      <option value="6">Subject Four</option>
+                      <option value="1">NFT 1</option>
+                      <option value="2">NFT 2</option>
+                      <option value="4">NFT 3</option>
+                      <option value="5">NFT 4</option>
+                      <option value="6">NFT 5</option>
                     </select>
                   </div>
                 </div>
@@ -97,9 +93,14 @@ const ContactFormSection = () => {
             </div>
 
             <div className="contact-btn d-flex justify-content-center">
-              <button className="fill-btn cancel-form-finance  m-4">
-                Cancel
-              </button>
+              <Link href="/explore-arts">
+                <a>
+                  <button className="fill-btn cancel-form-finance m-4">
+                    Cancel
+                  </button>
+                </a>
+              </Link>
+
               <button className="fill-btn  m-4">Save</button>
             </div>
           </form>
