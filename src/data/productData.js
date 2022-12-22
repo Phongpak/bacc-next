@@ -1,8 +1,8 @@
 const productData = [
     {
         id: '1',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/sadhasdocasdc.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/01.png",
         tag: 'Featured',
         featureClass: 'tag-featured',
         bid: 'Place Bid',
@@ -19,8 +19,8 @@ const productData = [
     },
     {
         id: '2',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/6244170cdbc1b582421642.gif",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/04.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -37,8 +37,8 @@ const productData = [
     },
     {
         id: '3',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/vfvkodfvdv.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/07.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -55,8 +55,8 @@ const productData = [
     },
     {
         id: '4',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/art46.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -73,8 +73,8 @@ const productData = [
     },
     {
         id: '5',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/art5.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -91,8 +91,8 @@ const productData = [
     },
     {
         id: '6',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/fvbsdhu-fgvsfgv.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/01.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -109,8 +109,8 @@ const productData = [
     },
     {
         id: '7',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/624415f0c23c9169046500.gif",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -127,8 +127,8 @@ const productData = [
     },
     {
         id: '8',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/art8.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -145,8 +145,8 @@ const productData = [
     },
     {
         id: '9',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/gndfodfkbgdf.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'tag-featured',
         count: '2.5k+',
@@ -163,8 +163,8 @@ const productData = [
     },
     {
         id: '10',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/bnkgbfgb.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -181,8 +181,8 @@ const productData = [
     },
     {
         id: '11',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/624419cdcc721482318301.gif",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -199,8 +199,8 @@ const productData = [
     },
     {
         id: '12',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
-        img: "assets/img/art/art2.jpg",
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
+        img: "assets/img/nft/10.png",
         tag: 'Featured',
         featureClass: 'd-none',
         count: '2.5k+',
@@ -217,7 +217,7 @@ const productData = [
     },
     {
         id: '13',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/62441afe467d8699022690.gif",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -235,7 +235,7 @@ const productData = [
     },
     {
         id: '14',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/svunsdivsdv.jpg",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -253,7 +253,7 @@ const productData = [
     },
     {
         id: '15',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/vhdfivsdfgv.jpg",
         tag: 'Featured',
         featureClass: 'tag-featured',
@@ -271,7 +271,7 @@ const productData = [
     },
     {
         id: '16',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/art7.jpg",
         tag: 'Featured',
         featureClass: 'tag-featured',
@@ -289,7 +289,7 @@ const productData = [
     },
     {
         id: '17',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/art10.jpg",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -307,7 +307,7 @@ const productData = [
     },
     {
         id: '18',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/art6.jpg",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -325,7 +325,7 @@ const productData = [
     },
     {
         id: '19',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/62441d5e2b80a671816939.gif",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -343,7 +343,7 @@ const productData = [
     },
     {
         id: '20',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/fgbndfjibdf.jpg",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -361,7 +361,7 @@ const productData = [
     },
     {
         id: '21',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/art20.jpg",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -379,7 +379,7 @@ const productData = [
     },
     {
         id: '22',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/art51.jpg",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -397,7 +397,7 @@ const productData = [
     },
     {
         id: '23',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/art18.jpg",
         tag: 'Featured',
         featureClass: 'd-none',
@@ -415,7 +415,7 @@ const productData = [
     },
     {
         id: '24',
-        wrapperClass: 'col-xl-3 col-lg-4 col-md-6 col-sm-6',
+        wrapperClass: 'col-xl-4 col-lg-4 col-md-6 col-sm-6',
         img: "assets/img/art/art24.jpg",
         tag: 'Featured',
         featureClass: 'tag-featured',

@@ -1,126 +1,355 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import useSticky from '../../../hooks/useSticky';
-import { useRouter } from 'next/router';
-import MobileMenu from './MobileMenu';
+/* eslint-disable @next/next/no-img-element */
+import React, { useState, useEffect } from "react";
+import useSticky from "../../../hooks/useSticky";
+import MobileMenu from "./MobileMenu";
+
+// next
+import Image from "next/image";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = ({ HeaderStatic }) => {
-   const [isActive11, setActive11] = useState("false");
+  const [isActive11, setActive11] = useState("false");
+  const token = true;
+  const handleToggle11 = () => {
+    setActive11(!isActive11);
+  };
 
-   const handleToggle11 = () => {
-      setActive11(!isActive11);
-   };
+  // sticky nav
+  const { sticky } = useSticky();
 
-   // sticky nav
-   const { sticky } = useSticky();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-   const [menuOpen, setMenuOpen] = useState(false)
+  const router = useRouter();
+  const [path, setPath] = useState("");
 
-   const router = useRouter()
-   const [path, setPath] = useState("")
-   useEffect(() => {
-      setPath(router.pathname)
-   }, [router])
+  useEffect(() => {
+    setPath(router.pathname);
+  }, [router]);
 
-   return (
-      <>
-         <header className={`header1 ${HeaderStatic ? HeaderStatic : ''}`}>
-            <div id="header-sticky" className={sticky ? "sticky header-main header-main1" : "header-main header-main1"}>
-               <div className="container header-container">
-                  <div className="row align-items-center">
-                     <div className="col-xl-2 col-lg-2 col-md-4 col-4">
-                        <div className="header-main-left">
-                           <div className="header-logo header1-logo">
-                              <Link href="/"><a className="logo-bb"><img src="assets/img/logo/oction-logo.png" alt="logo-img" /></a></Link>
-                              <Link href="/"><a className="logo-bw"><img src="assets/img/logo/oction-logo-bw.png" alt="logo-img" /></a></Link>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="col-xl-10 col-lg-10 col-md-8 col-8">
-                        <div className="header-main-right">
-                           <div className="main-menu main-menu1 d-none d-lg-block">
-                              <nav id="mobile-menu">
-                                 <ul>
-                                    <li className="menu-item-has-children"><Link href="/"><a>Home</a></Link>
-                                       <ul className="sub-menu">
-                                          <li><Link href="/"><a>Home Style 01</a></Link></li>
-                                          <li><Link href="/index-2"><a>Home Style 02</a></Link></li>
-                                          <li><Link href="/index-3"><a>Home Style 03</a></Link></li>
-                                       </ul>
-                                    </li>
-                                    <li><Link href="/explore-arts"><a>Explore</a></Link></li>
-                                    <li><Link href="/creators"><a>Creators</a></Link></li>
-                                    <li className="menu-item-has-children"><a href="#">Pages</a>
-                                       <ul className="sub-menu">
-                                          <li className="menu-item-has-children"><Link href="/creator-profile"><a>Creator</a></Link>
-                                             <ul className="sub-menu">
-                                                <li><Link href="/creator-profile"><a>Creator Profile</a></Link></li>
-                                                <li><Link href="/creator-profile-info-personal"><a>Creator Personal Info</a></Link></li>
-                                             </ul>
-                                          </li>
-                                          <li className="menu-item-has-children"><Link href="/art-details"><a>Art</a></Link>
-                                             <ul className="sub-menu">
-                                                <li><Link href="/art-details"><a>Art Details</a></Link></li>
-                                                <li><Link href="/upload-category"><a>Upload Category</a></Link></li>
-                                                <li><Link href="/upload"><a>Upload</a></Link></li>
-                                             </ul>
-                                          </li>
-                                          <li><Link href="/faq"><a>FAQ</a></Link></li>
-                                          <li><Link href="/register"><a>Register</a></Link></li>
-                                          <li><Link href="/login"><a>Login</a></Link></li>
-                                          <li><Link href="/terms"><a>Terms</a></Link></li>
-                                          <li><Link href="/wallet-connect"><a>Wallet Connect</a></Link></li>
-                                          <li><Link href="/activity"><a>Activity</a></Link></li>
-                                          <li><Link href="/art-ranking"><a>Ranking</a></Link></li>
-                                          <li><Link href="/error-404"><a>404 page</a></Link></li>
-                                       </ul>
-                                    </li>
-                                    <li><Link href="/forum"><a>Forum</a></Link></li>
-                                    <li><Link href="/contact"><a>Contact</a></Link></li>
-                                 </ul>
-                              </nav>
-                           </div>
-                           <form action="#" className="filter-search-input header-search d-none d-xl-inline-block">
-                              <input type="text" placeholder="Search keyword" />
-                              <button><i className="fal fa-search"></i></button>
-                           </form>
-                           <div className="header-btn ml-20 d-none d-xxl-inline-block">
-                              <Link href="/wallet-connect"><a className="fill-btn">Connect Wallet</a></Link>
-                           </div>
-                           <div className="profile-item profile-item-header ml-20 d-none d-md-inline-block pos-rel">
-                              <div className={`profile-img pos-rel ${isActive11 ? "" : "show-element"}`} onClick={handleToggle11}>
-                                 <div className="profile-action">
-                                    <ul>
-                                       <li><Link href="/creator-profile-info-personal"><a><i className="fal fa-user"></i>Profile</a></Link></li>
-                                       <li><Link href="/login"><a><i className="fal fa-sign-out"></i>Logout</a></Link></li>
-                                    </ul>
-                                 </div>
-                                 <img src="assets/img/profile/profile4.jpg" alt="profile-img" />
-                                 <div className="profile-verification verified">
-                                    <i className="fas fa-check"></i>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="menu-bar d-xl-none ml-20">
-                              <a className="side-toggle" href="#!" onClick={() => { setMenuOpen(!menuOpen) }}>
-                                 <div className="bar-icon">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
+  return (
+    <>
+      <header className={`header1 ${HeaderStatic ? HeaderStatic : ""}`}>
+        <div
+          id="header-sticky"
+          className={
+            // sticky ?
+            "sticky header-main header-main1 "
+            // : "header-main header-main1"
+          }
+        >
+          <div className="container header-container">
+            <div className="row align-items-center">
+              <div className="col-xl-2 col-lg-2 col-md-4 col-4">
+                <button
+                  type="button"
+                  className="header-main-left mt-3 mr-5"
+                  onClick={() => router.push("/")}
+                >
+                  <Image
+                    src="/assets/img/logo/logo-bacc.svg"
+                    alt="logo"
+                    width={250}
+                    height={40}
+                    className="logo-main"
+                  />
+                </button>
+              </div>
+
+              {/* <div className="col-xl-2 col-lg-2 col-md-4 col-4">
+ <form
+                  action="#"
+                  className="filter-search-input header-search d-none d-xl-inline-block mt-2 "
+                >
+                  <input
+                    type="text"
+                    placeholder="Search keyword"
+                    className="search-header"
+                  />
+                  <button>
+                    <i className="fal fa-search"></i>
+                  </button>
+                </form>
+              </div> */}
+
+              <div className="col-xl-10 col-lg-10 col-md-8 col-8">
+                <div className="header-main-right">
+                  <div className="main-menu main-menu1 d-none d-lg-block no-margin">
+                    <nav id="mobile-menu">
+                      <ul>
+                        <li>
+                          <Link href="/explore-arts">
+                            <a className="d-flex">
+                              <Image
+                                src="/assets/img/sideabr/explore.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Explore</span>
+                            </a>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link href="/create-nft">
+                            <a className="d-flex">
+                              <Image
+                                src="/assets/img/sideabr/auctions.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Create</span>
+                            </a>
+                          </Link>
+                        </li>
+                        {/* 
+                        <li>
+                          <Link href="/auctions">
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/auctions.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Auctions</span>
+                            </a>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link href="/creators">
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/Exhibitions.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Exhibitions</span>
+                            </a>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link href="/forum">
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/Activity.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Activity</span>
+                            </a>
+                          </Link>
+                        </li> */}
+
+                        {/* <li>
+                          <Link href="/forum">
+                            <a>
+                              <Image
+                                src="/assets/img/sideabr/Cart.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                              />
+                              <span className="p-1">Your cart</span>
+                            </a>
+                          </Link>
+                        </li> */}
+
+                        <li>
+                          <Link href="/creator-profile">
+                            <a className="d-flex">
+                              <Image
+                                src="/assets/img/sideabr/Account.svg"
+                                alt="logo"
+                                width={18}
+                                height={18}
+                                className="header-icon"
+                              />
+
+                              <span className="p-1">Account</span>
+                            </a>
+                          </Link>
+                        </li>
+                        {/* 
+                        <li>
+                          <Link href="/forum">
+                            <a className="button-change-i18n">EN|TH</a>
+                          </Link>
+                        </li> */}
+                      </ul>
+                    </nav>
                   </div>
-               </div>
-            </div>
-         </header>
 
-         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-         <div onClick={() => setMenuOpen(false)} className={menuOpen ? "offcanvas-overlay overlay-open" : "offcanvas-overlay"}></div>
-      </>
-   );
+                  {/* <div className="header-btn ml-20  d-xxl-inline-block mr-10">
+                    <Link href="/wallet-connect">
+                      <a className="fill-btn">Connect Wallet</a>
+                    </Link>
+                  </div> */}
+
+                  {/* <div className="profile-item profile-item-header ml-20 d-none d-md-inline-block pos-rel">
+                    <div
+                      className={`profile-img pos-rel ${
+                        isActive11 ? "" : "show-element"
+                      }`}
+                      onClick={handleToggle11}
+                    >
+                      <div className="profile-action">
+                        <ul>
+                          <li>
+                            <Link href="/creator-profile-info-personal">
+                              <a>
+                                <i className="fal fa-user"></i>Profile
+                              </a>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/login">
+                              <a>
+                                <i className="fal fa-sign-out"></i>Logout
+                              </a>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <img
+                        src="assets/img/profile/profile4.jpg"
+                        alt="profile-img"
+                      />
+                      <div className="profile-verification verified">
+                        <i className="fas fa-check"></i>
+                      </div>
+                    </div>
+                  </div> */}
+
+                  {/* <div className="menu-bar d-xl-none ml-20">
+                    <a
+                      className="side-toggle"
+                      href="#!"
+                      onClick={() => {
+                        setMenuOpen(!menuOpen);
+                      }}
+                    >
+                      <div className="bar-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </a>
+                  </div> */}
+
+                  {token ? (
+                    <div className="profile-item profile-item-header  d-none d-md-inline-block pos-rels">
+                      <div
+                        className={`profile-img pos-rel  ${
+                          isActive11 ? "" : "show-element"
+                        } `}
+                        onClick={handleToggle11}
+                      >
+                        <div className="profile-action ">
+                          <ul style={{ width: "auto" }}>
+                            <li>
+                              <Link href="/creator-profile">
+                                <a style={{ fontSize: "13px" }}>
+                                  <i className="fal fa-user"></i>Profile
+                                </a>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/create-nft">
+                                <a style={{ fontSize: "13px" }}>
+                                  <i className="fal fa-sign-out"></i>Create NFT
+                                </a>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/">
+                                <a style={{ fontSize: "13px" }}>
+                                  <i className="fal fa-sign-out"></i>Sign out
+                                </a>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                        <img
+                          src="assets/img/profile/profile4.jpg"
+                          alt="profile-img"
+                        />
+                        <div className="profile-verification verified">
+                          <i className="fas fa-check"></i>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="profile-item profile-item-header ml-20 d-none d-md-inline-block pos-rel">
+                      <div
+                        className={`profile-img pos-rel ${
+                          isActive11 ? "" : "show-element"
+                        }`}
+                        onClick={handleToggle11}
+                      >
+                        <div className="profile-action">
+                          <ul>
+                            <li>
+                              <Link href="/login">
+                                <a>
+                                  <i className="fal fa-user"></i>Login
+                                </a>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/register">
+                                <a>
+                                  <i className="fal fa-sign-out"></i>register
+                                </a>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <a>
+                          <i className="fal fa-user"></i> Account
+                        </a>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="menu-bar d-xl-none ml-20">
+                    <a
+                      className="side-toggle"
+                      href="#!"
+                      onClick={() => {
+                        setMenuOpen(!menuOpen);
+                      }}
+                    >
+                      <div className="bar-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <div
+        onClick={() => setMenuOpen(false)}
+        className={
+          menuOpen ? "offcanvas-overlay overlay-open" : "offcanvas-overlay"
+        }
+      ></div>
+    </>
+  );
 };
 
 export default Header;

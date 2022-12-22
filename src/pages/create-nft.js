@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import React from 'react';
-import HomeTwoMain from '../components/HomeTwo/HomeTwoMain';
+import CreateNFTMain from '../components/CreateForm/CreateNFTMain';
 import Footer from '../components/Layout/Footer/FooterOne/Footer';
 import Header from '../components/Layout/Header/Header';
 
 
-export default function HomeTwo() {
+export default function CreateNFT() {
 
     return (
         <>
@@ -15,8 +15,8 @@ export default function HomeTwo() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Header HeaderStatic="oc-transparent-header" />
-            <HomeTwoMain />
+            <Header />
+            <CreateNFTMain />
             <Footer />
         </>
     )

@@ -1,42 +1,39 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 const ExploreArtsBar = () => {
-    return (
-        <div className="row wow fadeInUp">
-            <div className="col-lg-12">
-                <form action="#" className="art-filter-row">
-                    <div className="filter-by-search mb-30">
-                        <div className="common-select-arrow common-select-arrow-50">
-                            <select className="item-category-select">
-                                <option value="1">All Artworks</option>
-                                <option value="2">Music</option>
-                                <option value="3">Games</option>
-                                <option value="4">Software</option>
-                                <option value="5">Video</option>
-                                <option value="6">Cartoon</option>
-                                <option value="7">Scenary</option>
-                                <option value="8">Art</option>
-                            </select>
-                        </div>
-                        <div className="filter-search-input">
-                            <input type="text" placeholder="Search keyword" />
-                            <button><i className="fal fa-search"></i></button>
-                        </div>
-                    </div>
-                    <div className="filter-by-sale d-flex mb-30">
-                        <div className="select-category-title"><i className="flaticon-filter"></i> Filters by</div>
-                        <div className="common-select-arrow common-select-arrow-50">
-                            <select className="sale-category-select">
-                                <option value="1">Auction</option>
-                                <option value="2">Fixed</option>
-                                <option value="3">On Sale</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
+  return (
+    <div className="row wow fadeInUp">
+      <div className="col-lg-12">
+        <form action="#" className="art-filter-row">
+          <div className=" mb-30">
+            <div className="filter-search-input explore-search">
+              <input type="text" placeholder="Search" />
+              <button className="fill-btn">Search</button>
             </div>
-        </div>
-    );
+          </div>
+          {/* <div className="filter-by-sale d-flex justify-content-around align-items-center mb-30">
+            <div className="icon-relaod common-select-arrow-50">
+              <Image
+                src="/assets/img/svg-icon/056-reload.svg"
+                alt="reload"
+                width={30}
+                height={30}
+              />
+            </div>
+            <div className="icon-relaod common-select-arrow-50">
+              <Image
+                src="/assets/img/svg-icon/057-cate.svg"
+                alt="reload"
+                width={30}
+                height={30}
+              />
+            </div>
+          </div> */}
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default ExploreArtsBar;
