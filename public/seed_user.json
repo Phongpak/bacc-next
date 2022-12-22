@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1",
+    "userName": "John",
+    "email": "john@gmail.com",
+    "password": "123456",
+    "bio": "I'am John Doe",
+    "fullAddress": "123 Ratchadapisek",
+    "street": "Prachasongkro",
+    "area": "Din daeng",
+    "province": "Bangkok",
+    "zipCode": "10500",
+    "phoneNumber": "0812345678",
+    "country": "Thailand",
+    "bank": "KBank",
+    "accountNumber": "1112223334",
+    "accountName": "John Doe"
+  }
+]

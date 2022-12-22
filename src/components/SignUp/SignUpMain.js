@@ -1,95 +1,143 @@
-import React from 'react';
-import Link from 'next/link';
-import ThemeChanger from '../Common/ThemeChanger';
-import Breadcrumbs from '../Common/PageTitle';
+import React, { useState } from "react";
+
+// next
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from 'next/router';
+
+//icon
+import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 
 const SignUpMain = () => {
-    return (
-        <main>
 
-            <ThemeChanger />
+  const router = useRouter()
+  const [isVisible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-            <Breadcrumbs breadcrumbTitle="Sign up" breadcrumbSubTitle="Create Account" />
+  const toggle = () => {
+    setVisible(!isVisible);
+  };
 
-            <section className="sign-up-area pt-130 pb-90" style={{ background: "url(assets/img/bg/sign-up-bg.jpg)" }}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="sign-up-wrapper pos-rel mb-40 wow fadeInUp">
-                                <div className="sign-up-inner">
-                                    <div className="sign-up-content">
-                                        <h4>Create Account</h4>
-                                        <p className="mb-35">It's easy to create an account for Non-fungible tokens and sale your any items independently online securely in the world.</p>
-                                        <form className="sign-up-form" action="#">
-                                            <div className="row">
-                                                <div className="col-md-6">
-                                                    <div className="single-input-unit">
-                                                        <label htmlFor="f-name">First Name</label>
-                                                        <input type="text" name="f-name" id="f-name" placeholder="Your first name" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="single-input-unit">
-                                                        <label htmlFor="l-name">Last Name</label>
-                                                        <input type="text" name="l-name" id="l-name" placeholder="Your last name" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="single-input-unit mb-30">
-                                                        <label htmlFor="g-select">Gender</label>
-                                                        <div className="common-select-arrow common-select-arrow-60 w-full">
-                                                            <select name="g-select" id="g-select" className="gender-category-select">
-                                                                <option value="1">Male</option>
-                                                                <option value="2">Female</option>
-                                                                <option value="3">Other</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="single-input-unit">
-                                                        <label htmlFor="m-id">Email</label>
-                                                        <input type="email" name="m-id" id="m-id" placeholder="Your email" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="single-input-unit">
-                                                        <label htmlFor="u-name">Username</label>
-                                                        <input type="text" name="u-name" id="u-name" placeholder="Username" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="single-input-unit">
-                                                        <label htmlFor="password">Password</label>
-                                                        <input type="password" name="password" id="password" placeholder="********" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="sign-up-btn">
-                                                <button className="fill-btn">Create Account</button>
-                                                <div className="note">Already have an account? <Link href="/login"><a className="text-btn">Sign In</a></Link></div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div className="sign-up-with-social">
-                                    <div className="sign-up-with-social-bg" style={{ background: "url(assets/img/bg/sign-up-social-bg.jpg)" }}></div>
-                                    <div className="sign-up-with-social-content">
-                                        <div className="text-or">Or</div>
-                                        <div className="sign-up-media">
-                                            <a href="#" className="sign-up-media-single"><img src="assets/img/svg-icon/gmail.svg" alt="media-img" /> Signup with Email</a>
-                                            <a href="#" className="sign-up-media-single"><img src="assets/img/svg-icon/facebook.svg" alt="media-img" /> Signup with Facebook</a>
-                                            <a href="#" className="sign-up-media-single"><img src="assets/img/svg-icon/twitter.svg" alt="media-img" /> Signup with Twitter</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  const handleCreateAccount = () => {
+    setLoading(true);
+    setTimeout(() => {
+      router.push("/confirm-email")
+    }, 1000);
+    setLoading(false);
+  };
+
+  return (
+    <main>
+      <section className="sign-up-area pt-130 pb-90">
+        <div className="w-full d-flex flex-column align-items-center mb-60">
+          <h1 className="topic-login">Welcome to</h1>
+          <Image
+            src="/assets/img/logo/logo-bacc.svg"
+            alt="logo"
+            width={250}
+            height={40}
+          />{" "}
+        </div>
+
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xxl-6 col-xl-7 col-lg-8">
+              <div className="sign-up-wrapper pos-rel mb-40 wow fadeInUp ">
+                <div className="sign-up-content  d-flex flex-column align-items-center">
+                  <form
+                    className="sign-up-form w-full d-flex flex-column align-items-center"
+                    action="#"
+                  >
+                    <div className="col-md-6 w-full">
+                      <div className="single-input-unit">
+                        <input
+                          type="text"
+                          name="f-name"
+                          id="f-name"
+                          placeholder="Full Name"
+                          className="no-border-input"
+                        />
+                      </div>
                     </div>
+
+                    <div className="col-md-6 w-full">
+                      <div className="single-input-unit">
+                        <input
+                          type="email"
+                          name="m-id"
+                          id="m-id"
+                          placeholder="Email address"
+                          className="no-border-input"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6 w-full">
+                      <div className="single-input-unit">
+                        <input
+                          type={!isVisible ? "password" : "text"}
+                          name="password"
+                          id="password"
+                          placeholder="Password"
+                          className="no-border-input"
+                        />
+                        <span
+                          className="icon-hide-button-signup"
+                          onClick={toggle}
+                        >
+                          {isVisible ? (
+                            <EyeOutlined />
+                          ) : (
+                            <EyeInvisibleOutlined />
+                          )}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="col-md-6 w-full">
+                      <div className="single-input-unit">
+                        <input
+                          type={!isVisible ? "password" : "text"}
+                          name="confirmPassword"
+                          id="confirmPassword"
+                          placeholder="Confirm Password"
+                          className="no-border-input"
+                        />
+                        <span
+                          className="icon-hide-button-signup"
+                          onClick={toggle}
+                        >
+                          {isVisible ? (
+                            <EyeOutlined />
+                          ) : (
+                            <EyeInvisibleOutlined />
+                          )}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="col-md-6 w-full">
+                      <div className="single-input-unit is-center-modal">
+                        <button className="fill-btn" onClick={handleCreateAccount}>
+                          Create Account
+                        </button>
+                        <div className="note is-logint-text">
+                          Already have an account?{" "}
+                          <Link href="/login">
+                            <a className="text-btn text-login">Log In</a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-            </section>
-        </main>
-    );
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* </div> */}
+      </section>
+    </main>
+  );
 };
 
 export default SignUpMain;

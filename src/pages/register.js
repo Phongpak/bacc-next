@@ -17,7 +17,7 @@ export default function Register() {
 
       <Header />
       <SignUpMain />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

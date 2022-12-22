@@ -1,12 +1,10 @@
-import Head from 'next/head';
-import React from 'react';
-import ActivityMain from '../components/Activity/ActivityMain';
-import Footer from '../components/Layout/Footer/FooterOne/Footer';
-import Header from '../components/Layout/Header/Header';
-
+import Head from "next/head";
+import React from "react";
+import ActivityMain from "../components/Activity/ActivityMain";
+import Footer from "../components/Layout/Footer/FooterOne/Footer";
+import Header from "../components/Layout/Header/Header";
 
 export default function Activity() {
-
   return (
     <>
       <Head>
@@ -19,5 +17,5 @@ export default function Activity() {
       <ActivityMain />
       <Footer />
     </>
-  )
+  );
 }
