@@ -7,11 +7,6 @@ import Header from "../components/Layout/Header/Header";
 export default function Home() {
   const [number, setNumber] = useState(0);
 
-  useEffect(() => {
-    // Reset number at startup
-    number = 0;
-  }, []);
-
   return (
     <>
       <Head>
