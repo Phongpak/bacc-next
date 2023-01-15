@@ -161,7 +161,7 @@ const Header = ({ HeaderStatic }) => {
                           </Link>
                         </li> */}
 
-                        <li>
+                        {/* <li>
                           <Link href="/creator-profile">
                             <a className="d-flex">
                               <Image
@@ -175,7 +175,7 @@ const Header = ({ HeaderStatic }) => {
                               <span className="p-1">Account</span>
                             </a>
                           </Link>
-                        </li>
+                        </li> */}
                         {/* 
                         <li>
                           <Link href="/forum">
@@ -257,6 +257,20 @@ const Header = ({ HeaderStatic }) => {
                               <Link href="/creator-profile">
                                 <a style={{ fontSize: "13px" }}>
                                   <i className="fal fa-user"></i>Profile
+                                </a>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/finance">
+                                <a style={{ fontSize: "13px" }}>
+                                  <i className="fal fa-sign-out"></i>Finance
+                                </a>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/setting">
+                                <a style={{ fontSize: "13px" }}>
+                                  <i className="fal fa-sign-out"></i>Setting
                                 </a>
                               </Link>
                             </li>

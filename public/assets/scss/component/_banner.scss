@@ -8,9 +8,21 @@
   position: relative;
 }
 
+
 .banner-670 {
   min-height: 580px;
   position: relative;
+
+  @media (min-width: 1600px) {
+    min-height: 723px !important;
+  }
+
+  @media (min-width: 1880px) {
+    min-height: 923px !important;
+  }
+  @media (min-width: 2500px) {
+    min-height: 1200px !important;
+  }
 }
 
 .banner-460 {
