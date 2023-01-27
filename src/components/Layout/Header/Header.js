@@ -40,10 +40,10 @@ const Header = ({ HeaderStatic }) => {
         >
           <div className="container header-container">
             <div className="row align-items-center">
-              <div className="col-xl-2 col-lg-2 col-md-4 col-4">
+              <div className="col-xl-2 col-lg-2 col-md-2 col-2">
                 <button
                   type="button"
-                  className="header-main-left mt-3 mr-5"
+                  className="header-main-left mt-2 mr-5"
                   onClick={() => router.push("/")}
                 >
                   <Image
@@ -56,35 +56,35 @@ const Header = ({ HeaderStatic }) => {
                 </button>
               </div>
 
-              {/* <div className="col-xl-2 col-lg-2 col-md-4 col-4">
- <form
-                  action="#"
-                  className="filter-search-input header-search d-none d-xl-inline-block mt-2 "
-                >
-                  <input
-                    type="text"
-                    placeholder="Search keyword"
-                    className="search-header"
-                  />
-                  <button>
-                    <i className="fal fa-search"></i>
+              <div className="col-xl-3 col-lg-3 col-md-3 col-3">
+                <div class="input-group">
+                  <div class="form-outline form-search-main">
+                    <input
+                      type="search"
+                      id="form1"
+                      class="form-control form-search-main"
+                    prefix="ds"
+                    />
+                  </div>
+                  <button type="button" class="btn btn-search form-search-main">
+                    <i class="fas fa-search icon"></i>
                   </button>
-                </form>
-              </div> */}
+                </div>
+              </div>
 
-              <div className="col-xl-10 col-lg-10 col-md-8 col-8">
+              <div className="col-xl-7 col-lg-7 col-md-7 col-7">
                 <div className="header-main-right">
                   <div className="main-menu main-menu1 d-none d-lg-block no-margin">
                     <nav id="mobile-menu">
                       <ul>
                         <li>
                           <Link href="/explore-arts">
-                            <a className="d-flex">
-                              <Image
+                            <a className="d-flex align-items-center">
+                              <img
                                 src="/assets/img/sideabr/explore.svg"
                                 alt="logo"
-                                width={18}
-                                height={18}
+                                width={20}
+                                height={20}
                               />
                               <span className="p-1">Explore</span>
                             </a>
@@ -92,27 +92,13 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/create-nft">
-                            <a className="d-flex">
-                              <Image
+                          <Link href="/explore-arts">
+                            <a className="d-flex align-items-center">
+                              <img
                                 src="/assets/img/sideabr/auctions.svg"
                                 alt="logo"
-                                width={18}
-                                height={18}
-                              />
-                              <span className="p-1">Create</span>
-                            </a>
-                          </Link>
-                        </li>
-                        {/* 
-                        <li>
-                          <Link href="/auctions">
-                            <a>
-                              <Image
-                                src="/assets/img/sideabr/auctions.svg"
-                                alt="logo"
-                                width={18}
-                                height={18}
+                                width={20}
+                                height={20}
                               />
                               <span className="p-1">Auctions</span>
                             </a>
@@ -120,13 +106,13 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/creators">
-                            <a>
-                              <Image
+                          <Link href="/explore-arts">
+                            <a className="d-flex align-items-center">
+                              <img
                                 src="/assets/img/sideabr/Exhibitions.svg"
                                 alt="logo"
-                                width={18}
-                                height={18}
+                                width={20}
+                                height={20}
                               />
                               <span className="p-1">Exhibitions</span>
                             </a>
@@ -134,116 +120,66 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/forum">
-                            <a>
-                              <Image
+                          <Link href="/explore-arts">
+                            <a className="d-flex align-items-center">
+                              <img
                                 src="/assets/img/sideabr/Activity.svg"
                                 alt="logo"
-                                width={18}
-                                height={18}
+                                width={20}
+                                height={20}
                               />
                               <span className="p-1">Activity</span>
                             </a>
                           </Link>
-                        </li> */}
+                        </li>
 
-                        {/* <li>
-                          <Link href="/forum">
-                            <a>
-                              <Image
+                        <li>
+                          <Link href="/explore-arts">
+                            <a className="d-flex align-items-center">
+                              <img
                                 src="/assets/img/sideabr/Cart.svg"
                                 alt="logo"
-                                width={18}
-                                height={18}
+                                width={20}
+                                height={20}
                               />
                               <span className="p-1">Your cart</span>
                             </a>
                           </Link>
-                        </li> */}
+                        </li>
 
-                        {/* <li>
-                          <Link href="/creator-profile">
-                            <a className="d-flex">
-                              <Image
+                        <li>
+                          <Link href="/explore-arts">
+                            <a className="d-flex align-items-center">
+                              <img
                                 src="/assets/img/sideabr/Account.svg"
+                                alt="logo"
+                                width={20}
+                                height={20}
+                              />
+                              <span className="p-1">Your cart</span>
+                              <img
+                                src="/assets/img/sideabr/down.svg"
                                 alt="logo"
                                 width={18}
                                 height={18}
-                                className="header-icon"
                               />
-
-                              <span className="p-1">Account</span>
                             </a>
                           </Link>
-                        </li> */}
-                        {/* 
+                        </li>
+
                         <li>
-                          <Link href="/forum">
-                            <a className="button-change-i18n">EN|TH</a>
+                          <Link href="/explore-arts">
+                            <a className="d-flex align-items-center">
+                              <div style={{ height: "18px" }}></div>
+                              <span className="p-1"> EN|TH</span>
+                            </a>
                           </Link>
-                        </li> */}
+                        </li>
                       </ul>
                     </nav>
                   </div>
 
-                  {/* <div className="header-btn ml-20  d-xxl-inline-block mr-10">
-                    <Link href="/wallet-connect">
-                      <a className="fill-btn">Connect Wallet</a>
-                    </Link>
-                  </div> */}
-
-                  {/* <div className="profile-item profile-item-header ml-20 d-none d-md-inline-block pos-rel">
-                    <div
-                      className={`profile-img pos-rel ${
-                        isActive11 ? "" : "show-element"
-                      }`}
-                      onClick={handleToggle11}
-                    >
-                      <div className="profile-action">
-                        <ul>
-                          <li>
-                            <Link href="/creator-profile-info-personal">
-                              <a>
-                                <i className="fal fa-user"></i>Profile
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/login">
-                              <a>
-                                <i className="fal fa-sign-out"></i>Logout
-                              </a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                      <img
-                        src="assets/img/profile/profile4.jpg"
-                        alt="profile-img"
-                      />
-                      <div className="profile-verification verified">
-                        <i className="fas fa-check"></i>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* <div className="menu-bar d-xl-none ml-20">
-                    <a
-                      className="side-toggle"
-                      href="#!"
-                      onClick={() => {
-                        setMenuOpen(!menuOpen);
-                      }}
-                    >
-                      <div className="bar-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                    </a>
-                  </div> */}
-
-                  {token ? (
+                  {/* {token ? (
                     <div className="profile-item profile-item-header  d-none d-md-inline-block pos-rels">
                       <div
                         className={`profile-img pos-rel  ${
@@ -331,7 +267,7 @@ const Header = ({ HeaderStatic }) => {
                         </a>
                       </div>
                     </div>
-                  )}
+                  )} */}
 
                   <div className="menu-bar d-xl-none ml-20">
                     <a

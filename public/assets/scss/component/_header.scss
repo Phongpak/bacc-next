@@ -411,7 +411,7 @@
 .sticky {
   position: fixed;
   top: 0;
-  background: #F9F5F0;
+  background: #f9f5f0;
   z-index: 800;
   right: 0;
   left: 0;
@@ -1028,4 +1028,29 @@ div.mean-container {
 
 .logo-main {
   padding-left: 10px !important;
+}
+
+.form-search-main {
+  background: #ffffff;
+  border-radius: 20px;
+  border: none;
+}
+
+.form-search-main {
+  &:focus {
+    background: #ffffff;
+    border: none;
+  }
+  &:hover {
+    background: #ffffff;
+    border: none;
+  }
+  &:active {
+    border: none;
+    background: #ffffff;
+  }
+}
+
+.icon {
+  color: #868686;
 }
