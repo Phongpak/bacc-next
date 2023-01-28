@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const WorkProcessSection = () => {
+  const router = useRouter();
   const WorkProcessItem = [
     {
       WorkProcessStep: "Step",
@@ -79,6 +80,10 @@ const WorkProcessSection = () => {
     },
   ];
 
+  const handleChangePage = (categpry) => {
+    router.push(`/explore-arts?collection=${categpry}`);
+  };
+
   return (
     <section className="work-process-area pt-110 pb-100 bg-area-cream">
       <div className="container">
@@ -92,20 +97,32 @@ const WorkProcessSection = () => {
         </div>
         <div className="work-processes">
           {WorkProcessItem && (
-            <div className="row wow fadeInUp">
+            <div className="row wow fadeInUp" style={{ cursor: "pointer"}}>
               {WorkProcessItem.map((WorkProcessSection, num) => (
-                <div key={num} className="col-lg-3 col-md-6 image-category">
+                <div
+                  key={num}
+                  className="col-lg-3 col-md-6 image-category"
+                  onClick={() =>
+                    handleChangePage(WorkProcessSection.WorkProcessCategory)
+                  }
+                >
                   <Image
                     src={WorkProcessSection.WorkProcessImage}
                     alt={WorkProcessSection.WorkProcessTitle}
                     width={300}
                     height={340}
                   />
-                  <span className="type-category">{WorkProcessSection.WorkProcessCategory}</span>
+                  <span className="type-category">
+                    {WorkProcessSection.WorkProcessCategory}
+                  </span>
                 </div>
               ))}
             </div>
           )}
+        </div>
+
+        <div style={{ marginTop: "10px" }} className="see-all-btn">
+          <a href="/explore-arts">See all</a>
         </div>
       </div>
     </section>

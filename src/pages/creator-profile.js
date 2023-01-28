@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import CreatorProfileMain from '../components/CreatorProfile/CreatorProfileMain';
-import Footer from '../components/Layout/Footer/FooterOne/Footer';
+import Footer from "../components/Layout/Footer/FooterColor/Footer";
 import Header from '../components/Layout/Header/Header';
 
 

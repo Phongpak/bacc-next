@@ -29,7 +29,7 @@ const SettingBankFormSection = () => {
           <div className="contact-content">
             <form className="contact-form" action="#">
               <div className="row ">
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="single-input-unit">
                     <h5 className="text-dark">Change password</h5>
                     <p>
@@ -56,7 +56,7 @@ const SettingBankFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="single-input-unit">
                     <label htmlFor="name">
                       New Password*{" "}
@@ -77,7 +77,7 @@ const SettingBankFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="single-input-unit">
                     <label htmlFor="name" className="topic">
                       Confirm Password*{" "}
@@ -98,7 +98,7 @@ const SettingBankFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="d-flex justify-content-between align-items-center">
                     <a className="btn-forgot-password">Forget password?</a>
                     <button className="fill-btn  m-4">Save change</button>

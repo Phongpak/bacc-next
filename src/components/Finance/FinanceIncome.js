@@ -18,6 +18,8 @@ const FinanceIncome = () => {
           description="20,000 BUSD"
           title="Monthly income"
           caption="Show account balance in "
+          isCalender={true}
+
         />
       </div>
     </div>

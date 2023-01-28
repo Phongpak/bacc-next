@@ -13,10 +13,10 @@ const ContactFormSection = () => {
             <div className="row ">
               <div className="col-md-6">
                 <div className="single-input-unit">
-                  <label htmlFor="name">
+                  <label className="" htmlFor="name">
                     Image, Video, Audio, or 3D Model*
                   </label>
-                  <p className="mb-15">
+                  <p className="">
                     File types supported: gif, jpg, png, svg, wav, ogg, glb,
                     glt, webm, Max size: 100 MB
                   </p>
@@ -27,14 +27,14 @@ const ContactFormSection = () => {
               <div className="col-md-12">
                 <div className="single-input-unit">
                   <label htmlFor="name" className="topic">
-                    Item Name
+                    Item Name <b className="require-flied">*</b>
                   </label>
                   <input
                     type="text"
                     name="name"
                     id="name"
                     className="input-text"
-                    placeholder="Your Name"
+                    placeholder="Item Name"
                   />
                 </div>
               </div>
@@ -44,13 +44,13 @@ const ContactFormSection = () => {
                   <label htmlFor="name" className="topic">
                     External link
                   </label>
-                  <p className="mb-15">description</p>
+                  <p className="">The description</p>
                   <input
                     type="text"
                     name="name"
                     className="input-text"
                     id="name"
-                    placeholder="Item name"
+                    placeholder="External link"
                   />
                 </div>
               </div>
@@ -60,12 +60,12 @@ const ContactFormSection = () => {
                   <label htmlFor="message" className="topic">
                     Description
                   </label>
-                  <p className="mb-15">description</p>
+                  <p className="">The description</p>
                   <textarea
                     name="message"
                     id="message"
                     className="input-text"
-                    placeholder="Write a messages..."
+                    placeholder="Description"
                   ></textarea>
                 </div>
               </div>
@@ -75,14 +75,18 @@ const ContactFormSection = () => {
                   <label htmlFor="s-select" className="topic">
                     Collection
                   </label>
-                  <div className="common-select-arrow common-select-arrow-60 mb-30 w-full">
+                  <p className="">This is the collection where your item will appear.</p>
+
+                  <div className="common-select-arrow common-select-arrow-60 mb-20 w-full">
                     <select
                       name="s-select"
                       id="s-select"
                       className="gender-category-select input-text"
+                      placeholder="Select Collection"
                     >
-                      <option value="1">NFT 1</option>
-                      <option value="2">NFT 2</option>
+                      <option selected value="1">Select Collection</option>
+                      <option value="2">NFT 1</option>
+                      <option value="3">NFT 2</option>
                       <option value="4">NFT 3</option>
                       <option value="5">NFT 4</option>
                       <option value="6">NFT 5</option>

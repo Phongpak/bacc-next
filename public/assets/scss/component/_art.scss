@@ -31,10 +31,11 @@
 }
 
 .art-item-wraper {
-  background: var(--clr-bg-white);
+  background: #f9f5f0;
+  box-shadow: 3px 4px 45px rgba(113, 113, 113, 0.3);
   border-radius: 10px;
-  padding: 10px;
-  border: 1px solid transparent;
+  width: 290px;
+  height: 399px;
 }
 
 .art-item-content {
@@ -1657,7 +1658,19 @@
   min-width: 930px;
 }
 
+.des-text {
+  font-weight: 400;
+  font-size: 16px !important;
+  line-height: 109.02%;
+  letter-spacing: 0.04em;
+  color: #717171;
+}
+
 .rank-list-row-heading {
+  .table-border {
+    border: 1px solid rgba(113, 113, 113, 0.15);
+  }
+
   .rank-list-row {
     height: 60px;
   }

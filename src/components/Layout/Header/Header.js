@@ -63,7 +63,7 @@ const Header = ({ HeaderStatic }) => {
                       type="search"
                       id="form1"
                       class="form-control form-search-main"
-                    prefix="ds"
+                      prefix="ds"
                     />
                   </div>
                   <button type="button" class="btn btn-search form-search-main">
@@ -92,7 +92,7 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/explore-arts">
+                          <Link href="/create-nft">
                             <a className="d-flex align-items-center">
                               <img
                                 src="/assets/img/sideabr/auctions.svg"
@@ -106,7 +106,7 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/explore-arts">
+                          <Link href="/exhibitions">
                             <a className="d-flex align-items-center">
                               <img
                                 src="/assets/img/sideabr/Exhibitions.svg"
@@ -120,7 +120,7 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/explore-arts">
+                          <Link href="/activity">
                             <a className="d-flex align-items-center">
                               <img
                                 src="/assets/img/sideabr/Activity.svg"
@@ -134,7 +134,7 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/explore-arts">
+                          <Link href="/your-cart">
                             <a className="d-flex align-items-center">
                               <img
                                 src="/assets/img/sideabr/Cart.svg"
@@ -148,23 +148,21 @@ const Header = ({ HeaderStatic }) => {
                         </li>
 
                         <li>
-                          <Link href="/explore-arts">
-                            <a className="d-flex align-items-center">
-                              <img
-                                src="/assets/img/sideabr/Account.svg"
-                                alt="logo"
-                                width={20}
-                                height={20}
-                              />
-                              <span className="p-1">Your cart</span>
-                              <img
-                                src="/assets/img/sideabr/down.svg"
-                                alt="logo"
-                                width={18}
-                                height={18}
-                              />
-                            </a>
-                          </Link>
+                          <a className="d-flex align-items-center">
+                            <img
+                              src="/assets/img/sideabr/Account.svg"
+                              alt="logo"
+                              width={20}
+                              height={20}
+                            />
+                            <span className="p-1">Account</span>
+                            <img
+                              src="/assets/img/sideabr/down.svg"
+                              alt="logo"
+                              width={18}
+                              height={18}
+                            />
+                          </a>
                         </li>
 
                         <li>

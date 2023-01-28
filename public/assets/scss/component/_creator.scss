@@ -517,7 +517,7 @@
 // creator-details style
 .creator-cover-img.creator-details-cover-img {
   img {
-    height: 280px;
+    height: 400px;
     border-radius: 0;
   }
 
@@ -551,7 +551,7 @@
     border-radius: 50%;
     margin-left: -10px;
     padding: 10px;
-    margin-top: -135px;
+    margin-top: -112px;
     margin-bottom: 10px;
 
     img {
@@ -727,7 +727,9 @@
 }
 
 .creator-info-tab {
-  border-right: 1px solid #dcd5cb;
+  border-right: 0;
+  border-left: 1px solid #dcd5cb;
+  padding-left: 10px;
 }
 
 // creator-info-tab style
@@ -1075,4 +1077,51 @@
 .top-seller-area {
   position: relative;
   z-index: 2;
+}
+
+.artist-name-2 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.artist-user-id {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #dcd5cb;
+}
+.apply-btn {
+  background: rgba(198, 175, 128, 0.5);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 109.02%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  width: 100%;
+  height: 50px;
+  color: #fef7ec;
+}
+
+.text-items {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: end;
+}
+.require-flied {
+  color: #FF3D00;
+}
+
+
+.sc-dkrFOg.dmajdp {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+}
+.sc-bcXHqe.kjDVC  {
+  display: flex;
 }

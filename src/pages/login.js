@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import Header from '../components/Layout/Header/Header';
 import LoginMain from '../components/Login/LoginMain';
+import Footer from "../components/Layout/Footer/FooterColor/Footer";
 
 
 

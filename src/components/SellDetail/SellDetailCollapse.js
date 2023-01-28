@@ -39,7 +39,7 @@ const SellDetailCollapse = ({ title, icon, style, children, type }) => {
                               height={20}
                               className="pr-10"
                             />
-                            <span className="ml-10">{title}</span>
+                            <span className="ml-10 text-title">{title}</span>
                           </button>
                         </h2>
                         <div
@@ -48,7 +48,7 @@ const SellDetailCollapse = ({ title, icon, style, children, type }) => {
                           aria-labelledby="headingOneA"
                           data-bs-parent="#Accordions1"
                         >
-                          <div className="accordion-body">{children}</div>
+                          <div className="accordion-body des-text">{children}</div>
                         </div>
                       </div>
                     </div>

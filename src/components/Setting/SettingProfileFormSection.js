@@ -35,7 +35,7 @@ const SettingProfileFormSection = () => {
           <div className="d-flex flex-row">
             <div className="img-box">
               <h5 className="text-dark">
-                Prifile picture <img src="/assets/img/svg-icon/note.svg" />
+                Profile picture <img src="/assets/img/svg-icon/note.svg" />
               </h5>
               <div className="img-upload">
                 {!previewProfile && (
@@ -158,7 +158,14 @@ const SettingProfileFormSection = () => {
                     </label>
                     <div className="row">
                       <div className="col-md-2 col-xl-2">
-                        <div className="box-porfile-social"></div>
+                        <div className="box-porfile-social">
+                          <img
+                            src="/assets/img/social/disocrd.svg"
+                            alt="discord"
+                            width={50}
+                            height={50}
+                          />
+                        </div>
                       </div>
                       <div className="col-md-12 col-xl-10">
                         <input
@@ -166,13 +173,20 @@ const SettingProfileFormSection = () => {
                           name="name"
                           id="name"
                           className="input-text"
-                          placeholder="Discord"
+                          placeholder="Enter Discord"
                         />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-2 col-xl-2">
-                        <div className="box-porfile-social"></div>
+                        <div className="box-porfile-social">
+                          <img
+                            src="/assets/img/social/facebook.svg"
+                            alt="discord"
+                            width={50}
+                            height={50}
+                          />
+                        </div>
                       </div>
                       <div className="col-md-12 col-xl-10">
                         <input
@@ -180,13 +194,20 @@ const SettingProfileFormSection = () => {
                           name="name"
                           id="name"
                           className="input-text"
-                          placeholder="Discord"
+                          placeholder="Enter Facebook"
                         />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-2 col-xl-2">
-                        <div className="box-porfile-social"></div>
+                        <div className="box-porfile-social">
+                          <img
+                            src="/assets/img/social/instagram.svg"
+                            alt="discord"
+                            width={50}
+                            height={50}
+                          />
+                        </div>
                       </div>
                       <div className="col-md-12 col-xl-10">
                         <input
@@ -194,13 +215,20 @@ const SettingProfileFormSection = () => {
                           name="name"
                           id="name"
                           className="input-text"
-                          placeholder="Enter provice"
+                          placeholder="Enter Instagram"
                         />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-2 col-xl-2">
-                        <div className="box-porfile-social"></div>
+                        <div className="box-porfile-social">
+                          <img
+                            src="/assets/img/social/telegram.svg"
+                            alt="discord"
+                            width={50}
+                            height={50}
+                          />
+                        </div>
                       </div>
                       <div className="col-md-12 col-xl-10">
                         <input
@@ -208,7 +236,7 @@ const SettingProfileFormSection = () => {
                           name="name"
                           id="name"
                           className="input-text"
-                          placeholder="Enter provice"
+                          placeholder="Enter Telegram"
                         />
                       </div>
                     </div>

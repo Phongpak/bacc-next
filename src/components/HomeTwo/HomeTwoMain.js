@@ -12,7 +12,7 @@ const HomeTwoMain = () => {
   return (
     <main>
       <HeroSectionTwo />
-      <PopularSection />
+      {/* <PopularSection /> */}
       <TrendingSection />
       <TopCreatorTwo />
       <WorkProcessSection />

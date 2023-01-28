@@ -17,6 +17,7 @@ const FinanceExpenese = () => {
           description="20,000 BUSD"
           title="Monthly expenses"
           caption="Show account balance in "
+          isCalender={true}
         />
       </div>
     </div>

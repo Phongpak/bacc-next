@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 const FinanceCard = (props) => {
-  const { description, title, caption } = props;
+  const { description, title, caption, isCalender } = props;
   return (
     <section className="creator-area pt-50">
       <div className="container d-flex justify-content-center">
@@ -14,6 +13,18 @@ const FinanceCard = (props) => {
             className="imge-finance"
           />
           <div className="text-box-finance">
+            {isCalender && (
+              <div className="d-flex justify-content-end mr-50">
+                <img
+                  src="/assets/img/profile/calender.svg"
+                  alt="icon"
+                  height={20}
+                  width={20}
+                  className="calender-icon"
+                />
+              </div>
+            )}
+
             <div>
               <h4>{title}</h4>
               <h3 className="text-dark">{description}</h3>
@@ -31,7 +42,7 @@ const FinanceCard = (props) => {
                 </div>
               </div>
               <div className="reload-icon-finance">
-                <Image
+                <img
                   src="/assets/img/svg-icon/reload.svg"
                   alt="icon"
                   height={20}

@@ -166,6 +166,12 @@ const ExploreFilterLeft = () => {
           </>
         ))}
       </div>
+
+      <div className="mr-10">
+        <button type="submit" className="apply-btn">
+          Apply
+        </button>
+      </div>
     </section>
   );
 };

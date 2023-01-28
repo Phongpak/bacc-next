@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../components/Layout/Footer/FooterOne/Footer';
+import Footer from "../components/Layout/Footer/FooterColor/Footer";
 import Header from '../components/Layout/Header/Header';
 import SignUpMain from '../components/SignUp/SignUpMain';
 
@@ -17,7 +17,7 @@ export default function Register() {
 
       <Header />
       <SignUpMain />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

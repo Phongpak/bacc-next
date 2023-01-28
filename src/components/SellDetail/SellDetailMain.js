@@ -3,11 +3,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import SellDetailCollapse from "./SellDetailCollapse";
 import RankingTableTitle from "../ArtRanking/RankingTableTitle";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 const SellDetailMain = () => {
   const productItem = useSelector((state) => state.products.specificItem);
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <main>
@@ -67,10 +67,18 @@ const SellDetailMain = () => {
                         <h4 className="art-name">Pu</h4>
                       </div>
                       <div>
-                        <button className="fill-btn m-1 edit-sell-btn" onClick={() => router.push("/edit-nft")}>
+                        <button
+                          className="fill-btn m-1 edit-sell-btn"
+                          onClick={() => router.push("/edit-nft")}
+                        >
                           Edit
                         </button>
-                        <button className="fill-btn m-1" onClick={() => router.push("/sell-item")}>Sell</button>
+                        <button
+                          className="fill-btn m-1"
+                          onClick={() => router.push("/sell-item")}
+                        >
+                          Sell
+                        </button>
                       </div>
                     </div>
 
@@ -85,7 +93,7 @@ const SellDetailMain = () => {
 
                   <div className="artist-meta-info art-details-meta-info">
                     <SellDetailCollapse
-                    //   title={"Sale ends December 6, 2022 at 5:35am"}
+                      //   title={"Sale ends December 6, 2022 at 5:35am"}
                       type={""}
                       icon="/assets/img/logo/sale.svg"
                       style="no-icon"
@@ -105,7 +113,7 @@ const SellDetailMain = () => {
                       style=""
                     >
                       <div className="d-flex flex-column">
-                        <RankingTableTitle />
+                        No data history yet{" "}
                       </div>
                     </SellDetailCollapse>
                   </div>
@@ -118,7 +126,7 @@ const SellDetailMain = () => {
                       style=""
                     >
                       <div className="d-flex flex-column">
-                        <RankingTableTitle />
+                        No data history yet{" "}
                       </div>
                     </SellDetailCollapse>
                   </div>
@@ -148,7 +156,7 @@ const SellDetailMain = () => {
                       style=""
                     >
                       <div className="d-flex flex-column">
-                        <RankingTableTitle />
+                        No data history yet{" "}
                       </div>
                     </SellDetailCollapse>
                   </div>

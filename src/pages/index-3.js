@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import HomeOneMain from "../components/HomeOne/HomeOneMain";
-import Footer from "../components/Layout/Footer/FooterOne/Footer";
+import Footer from "../components/Layout/Footer/FooterColor/Footer";
 import Header from "../components/Layout/Header/Header";
 
 export default function Home() {

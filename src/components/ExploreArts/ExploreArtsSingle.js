@@ -36,12 +36,9 @@ const ExploreArtsSingle = ({ product }) => {
         <div className="art-item-wraper">
           <div className="art-item-inner">
             <div className="art-item-img pos-rel">
-              {/* <a href="#" className="place-bid">
-                {bid}
-              </a> */}
               <Link href="/art-details">
                 <a onClick={handleProductDetails}>
-                  <img src={img} alt="art-img" />
+                  <img src={img} alt="art-img" style={{ height: "220px"}} />
                 </a>
               </Link>
             </div>

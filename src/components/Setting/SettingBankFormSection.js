@@ -29,7 +29,7 @@ const SettingBankFormSection = () => {
           <div className="contact-content">
             <form className="contact-form" action="#">
               <div className="row ">
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="single-input-unit">
                     <label htmlFor="name" className="topic">
                       Bank
@@ -44,7 +44,7 @@ const SettingBankFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="single-input-unit">
                     <label htmlFor="name" className="topic">
                       Account number
@@ -59,7 +59,7 @@ const SettingBankFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="single-input-unit">
                     <label htmlFor="name" className="topic">
                       Beneficial owner
@@ -74,7 +74,7 @@ const SettingBankFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
+                <div className="col-md-12 col-xl-8 mb-20">
                   <div className="single-input-unit">
                     <label htmlFor="name" className="topic">
                       Bank branch

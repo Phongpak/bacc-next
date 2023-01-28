@@ -5,6 +5,11 @@ import FinanceTable from "./FinanceTable";
 
 const FinanceMain = () => {
   const [type, setType] = useState("Income");
+
+  const handleWithdraw = () => {
+    alert("Withdraw !!");
+  };
+  
   return (
     <main>
       <section className="creator-area pt-130 pb-100">
@@ -30,7 +35,9 @@ const FinanceMain = () => {
                   Expenses
                 </button>
               </div>
-              <button className="fill-btn">Withdraw</button>
+              <button className="fill-btn" onClick={handleWithdraw}>
+                Withdraw
+              </button>
             </div>
           </div>
           {type.includes("Income") ? <FinanceIncome /> : <FinanceExpenese />}

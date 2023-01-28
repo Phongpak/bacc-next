@@ -62,7 +62,9 @@
 .box-porfile-social {
   width: 100%;
   height: 64%;
-  background: #d9d9d9;
+  // background: #d9d9d9;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-forgot-password {

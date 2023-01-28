@@ -23,16 +23,38 @@ const CreatorProfileMain = () => {
           <div className="row">
             <div className="col-xl-12 col-lg-6 col-md-8">
               <div className="creator-about wow fadeInUp">
-                <div className="profile-img pos-rel">
-                  <img src={creatorItem.profileImage} alt="img" />
+                <div className="d-flex justify-content-between">
+                  <div className="profile-img pos-rel">
+                    <img src={creatorItem.profileImage} alt="img" />
+                  </div>
+
+                  <div className="mt-10">
+                    <img src={"/assets/img/profile/more.svg"} alt="img" />
+                    <img
+                      src={"/assets/img/profile/view.svg"}
+                      className="ml-20"
+                      alt="img"
+                    />
+                  </div>
                 </div>
+
                 <h4 className="artist-name pos-rel">
                   {creatorItem.name}
                   <span className="profile-verification verified">
                     <i className="fas fa-check"></i>
                   </span>
                 </h4>
-                <div className="artist-id">{creatorItem.artistId}</div>
+                <div className="artist-name-2">Narapon Jirattitigarnpong</div>
+                <div className="artist-user-id mt-10 mb-1">
+                  User ID #1234 <span className="ml-5">|</span> 
+                  <img
+                    src={"/assets/img/profile/calender.svg"}
+                    className="mr-10 ml-10"
+                    alt="img"
+                  />
+                  Joined July 2021
+                </div>
+
                 <p>
                   My name is Justin Baker & change my occupation after five
                   years of working in sales. I still like drawing.

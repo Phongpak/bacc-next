@@ -49,7 +49,7 @@ const ArtDetailsMain = () => {
                     type={"collapse"}
                     icon="/assets/img/logo/collection.svg"
                   >
-                    <div className="d-flex flex-column">
+                    <div className="d-flex flex-column des-text">
                       The picture is represent zebra
                     </div>
                   </ArtDetailsCollapse>
@@ -78,7 +78,7 @@ const ArtDetailsMain = () => {
                       icon="/assets/img/logo/sale.svg"
                       style="no-icon"
                     >
-                      <div className="d-flex flex-column">
+                      <div className="d-flex flex-column des-text">
                         <span className="current-price">Current Price</span>
                         <span className="price-value">0.003 ETH</span>
                         <button className="fill-btn mt-2 btn-buy-art-detail">
@@ -95,8 +95,8 @@ const ArtDetailsMain = () => {
                       icon="/assets/img/logo/price.svg"
                       style=""
                     >
-                      <div className="d-flex flex-column">
-                        <RankingTableTitle />
+                      <div className="d-flex flex-column des-text">
+                        No data history yet
                       </div>
                     </ArtDetailsCollapse>
                   </div>
@@ -108,7 +108,7 @@ const ArtDetailsMain = () => {
                       icon="/assets/img/logo/Offer.svg"
                       style=""
                     >
-                      <div className="d-flex flex-column">
+                      <div className="d-flex flex-column des-text">
                         <RankingTableTitle />
                       </div>
                     </ArtDetailsCollapse>
@@ -125,7 +125,7 @@ const ArtDetailsMain = () => {
                       icon="/assets/img/logo/price.svg"
                       style=""
                     >
-                      <div className="d-flex flex-column">
+                      <div className="d-flex flex-column des-text">
                         <RankingTableTitle />
                       </div>
                     </ArtDetailsCollapse>
@@ -138,7 +138,7 @@ const ArtDetailsMain = () => {
                       icon="/assets/img/logo/price.svg"
                       style=""
                     >
-                      <div className="d-flex flex-column">
+                      <div className="d-flex flex-column des-text">
                         <RankingTableTitle />
                       </div>
                     </ArtDetailsCollapse>

@@ -1,9 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Link from "next/link";
-// import DragDropSection from "../Upload/DragDropSection";
+import { useRouter } from "next/router";
 
 const SettingAccountFormSection = () => {
+  const router = useRouter();
+
+  const handleConnectWallet = () => {
+    router.push("/wallet-connect");
+  };
+
   return (
     <>
       <div className="mt-70 pb-40 divider-setting">
@@ -23,7 +28,9 @@ const SettingAccountFormSection = () => {
             </div>
           </div>
 
-          <button className="fill-btn">Connect wallet</button>
+          <button className="fill-btn" onClick={handleConnectWallet}>
+            Connect wallet
+          </button>
         </div>
       </div>
 
@@ -33,8 +40,8 @@ const SettingAccountFormSection = () => {
           <div className="contact-content">
             <form className="contact-form" action="#">
               <div className="row">
-                <div className="col-md-12 col-xl-8">
-                  <div className="single-input-unit">
+                <div className="col-md-12 col-xl-12 mb-10">
+                  <div className="single-input-unit  d-flex align-items-center">
                     <label htmlFor="name" className="topic">
                       Full Address
                       <span
@@ -54,8 +61,8 @@ const SettingAccountFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
-                  <div className="single-input-unit">
+                <div className="col-md-12 col-xl-12 mb-10">
+                  <div className="single-input-unit d-flex align-items-center">
                     <label htmlFor="name" className="topic">
                       Street
                     </label>
@@ -69,8 +76,8 @@ const SettingAccountFormSection = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
-                  <div className="single-input-unit">
+                <div className="col-md-12 col-xl-12 mb-10">
+                  <div className="single-input-unit d-flex align-items-center">
                     <label htmlFor="name" className="topic">
                       Area{" "}
                       <span
@@ -80,18 +87,25 @@ const SettingAccountFormSection = () => {
                         *
                       </span>
                     </label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      className="input-text"
-                      placeholder="Your Name"
-                    />
+                    <div className="common-select-arrow common-select-arrow-60 mb-20 w-full">
+                      <select
+                        name="s-select"
+                        id="s-select"
+                        className="gender-category-select input-text"
+                        placeholder="Enter Area"
+                      >
+                        <option value="2">NFT 1</option>
+                        <option value="3">NFT 2</option>
+                        <option value="4">NFT 3</option>
+                        <option value="5">NFT 4</option>
+                        <option value="6">NFT 5</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
-                  <div className="single-input-unit">
+                <div className="col-md-12 col-xl-12 mb-10">
+                  <div className="single-input-unit d-flex align-items-center">
                     <label htmlFor="name" className="topic">
                       Provice
                       <span
@@ -101,19 +115,27 @@ const SettingAccountFormSection = () => {
                         *
                       </span>
                     </label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      className="input-text"
-                      placeholder="Enter provice"
-                    />
+                    <div className="common-select-arrow common-select-arrow-60 mb-20 w-full">
+                      <select
+                        name="s-select"
+                        id="s-select"
+                        className="gender-category-select input-text"
+                        placeholder="Enter province"
+                      >
+                        <option value={""}>Enter province</option>
+                        <option value="2">Bangkok</option>
+                        <option value="3">NFT 2</option>
+                        <option value="4">NFT 3</option>
+                        <option value="5">NFT 4</option>
+                        <option value="6">NFT 5</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
 
                 <div className="row">
-                  <div className="col-md-4 col-xl-4">
-                    <div className="single-input-unit">
+                  <div className="col-md-6 col-xl-6 mb-10">
+                    <div className="single-input-unit d-flex align-items-center">
                       <label htmlFor="name" className="topic">
                         Zip Code
                         <span
@@ -127,14 +149,15 @@ const SettingAccountFormSection = () => {
                         type="text"
                         name="name"
                         id="name"
+                        style={{ marginLeft: "20px" }}
                         className="input-text"
                         placeholder="Enter provice"
                       />
                     </div>
                   </div>
 
-                  <div className="col-md-4 col-xl-4">
-                    <div className="single-input-unit">
+                  <div className="col-md-6 col-xl-6 mb-10">
+                    <div className="single-input-unit d-flex align-items-center">
                       <label htmlFor="name" className="topic">
                         Phone Number
                         <span
@@ -149,14 +172,14 @@ const SettingAccountFormSection = () => {
                         name="name"
                         id="name"
                         className="input-text"
-                        placeholder="Enter provice"
+                        placeholder="Enter phone number"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="col-md-12 col-xl-8">
-                  <div className="single-input-unit">
+                <div className="col-md-12 col-xl-12 mb-10">
+                  <div className="single-input-unit d-flex align-items-center">
                     <label htmlFor="name" className="topic">
                       Country
                       <span
@@ -166,13 +189,21 @@ const SettingAccountFormSection = () => {
                         *
                       </span>
                     </label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      className="input-text"
-                      placeholder="Enter country"
-                    />
+                    <div className="common-select-arrow common-select-arrow-60 mb-20 w-full">
+                      <select
+                        name="s-select"
+                        id="s-select"
+                        className="gender-category-select input-text"
+                        placeholder="Enter country"
+                      >
+                        <option value={""}>Enter country</option>
+                        <option value="2">Bangkok</option>
+                        <option value="3">NFT 2</option>
+                        <option value="4">NFT 3</option>
+                        <option value="5">NFT 4</option>
+                        <option value="6">NFT 5</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -184,7 +215,14 @@ const SettingAccountFormSection = () => {
                     When you delete your account, your information, your
                     profile, photos, videos, likes and followers will be
                     permanently removed.{" "}
-                    <span style={{ color: "rgba(255, 61, 0, 0.65)", textDecoration: "underline" }}>Delete Account</span>
+                    <span
+                      style={{
+                        color: "rgba(255, 61, 0, 0.65)",
+                        textDecoration: "underline",
+                      }}
+                    >
+                      Delete Account
+                    </span>
                   </p>
                 </div>
               </div>

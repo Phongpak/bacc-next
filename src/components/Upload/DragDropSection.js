@@ -11,7 +11,7 @@ const DragDropSection = () => {
 
     return (
         <>
-            <div className="browse-file-wrapper mb-30 wow fadeInUp">
+            <div className="browse-file-wrapper mb-30 wow fadeInUp  d-flex justify-content-center flex-column text-center align-items-center">
                 <div className="browse-file-icon">
                     <i className="flaticon-cloud-computing"></i>
                 </div>
